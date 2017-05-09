@@ -1,0 +1,373 @@
+/* BASIC THEME CONFIGURATION */
+body {
+    font-family: 'Microsoft YaHei UI', sans-serif;
+    margin: 0px !important;
+    font-size: 14px;
+    padding-top: 50px;
+}
+
+ul li {
+    list-style: none;
+}
+
+a, a:hover, a:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+ul.sidebar-menu li {
+    /*line-height: 20px !important;*/
+    margin-bottom: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+ul.sidebar-menu li a.active, ul.sidebar-menu li a:hover, ul.sidebar-menu li a:focus {
+    background: #428bca;
+    color: #fff;
+    display: block;
+
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+::selection {
+
+    background: #428bca;
+    color: #fff;
+}
+
+::-moz-selection {
+    background: #428bca;
+    color: #fff;
+}
+
+#container {
+    width: 100%;
+    height: 100%;
+}
+
+/*LOGIN CONFIGURATION PAGE*/
+.form-login {
+    max-width: 330px;
+    margin: 100px auto 0;
+    background: #fff;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+.form-login h2.form-login-heading {
+    margin: 0;
+    padding: 25px 20px;
+    text-align: center;
+    background: #428bca;
+    border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 5px 5px 0 0;
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.login-wrap {
+    padding: 20px;
+}
+
+.login-wrap .registration {
+    text-align: center;
+}
+
+/* FORMS CONFIGURATION */
+label {
+    font-weight: 400;
+}
+
+#focusedInput {
+    border: 1px solid #ed5565;
+    box-shadow: none;
+}
+
+.showcase-form textarea.ng-dirty.ng-invalid,
+.showcase-form select.ng-dirty.ng-invalid,
+.showcase-form input.ng-dirty.ng-invalid {
+    border-color: #e9322d;
+    -webkit-box-shadow: 0 0 6px #f8b9b7;
+    -moz-box-shadow: 0 0 6px #f8b9b7;
+    box-shadow: 0 0 6px #f8b9b7;
+}
+
+.add-on {
+    float: right;
+    margin-top: -37px;
+    padding: 3px;
+    text-align: center;
+}
+
+.add-on .btn {
+    height: 34px;
+}
+
+/* Bootstrap Modifications */
+.table-hover > tbody > tr:hover {
+    background-color: #d5d5d5;
+}
+
+.checkbox {
+    min-height: 20px;
+}
+
+.modal-header {
+    background: #428bca;
+}
+
+.modal-title {
+    color: white;
+}
+
+.btn-round {
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+}
+
+.accordion-heading .accordion-toggle {
+    display: block;
+    cursor: pointer;
+    border-top: 1px solid #F5F5F5;
+    padding: 5px 0px;
+    line-height: 28.75px;
+    text-transform: uppercase;
+    color: #1a1a1a;
+    background-color: #ffffff;
+    outline: none !important;
+    text-decoration: none;
+}
+
+/*Theme Buttons*/
+
+.btn-theme {
+    color: #fff;
+    background-color: #428bca;
+    border-color: #428bca;
+}
+
+.btn-theme:hover,
+.btn-theme:focus,
+.btn-theme:active,
+.btn-theme.active,
+.open .dropdown-toggle.btn-theme {
+    color: #fff;
+    background-color: #428bca;
+    border-color: #428bca;
+}
+
+.btn + .btn {
+    margin-bottom: 0;
+    margin-left: 5px;
+}
+
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #797979;
+}
+
+/*
+ *  Background animate
+ */
+#the_canvas {
+    position: fixed;
+    z-index: -1;
+}
+
+/*
+ * Top navigation
+ * Hide default border to remove 1px line.
+ */
+.navbar-fixed-top {
+    border: 0;
+}
+
+/*
+ * Sidebar
+ */
+
+/* Hide for mobile, show later */
+.sidebar {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .sidebar {
+        position: fixed;
+        top: 51px;
+        bottom: 0;
+        left: 0;
+        z-index: 1000;
+        display: block;
+        padding: 20px;
+        overflow-x: hidden;
+        overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+        background-color: #f5f5f5;
+        border-right: 1px solid #eee;
+    }
+}
+
+/* Sidebar navigation */
+.sidebar-space {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.nav-sidebar {
+    margin-right: -21px; /* 20px padding + 1px border */
+    margin-bottom: 10px;
+    margin-left: -20px;
+}
+
+.sub li {
+    padding-left: 15px;
+}
+
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
+    color: #fff;
+    background-color: #428bca;
+}
+
+
+
+ul.sidebar-menu li a i {
+    font-size: 15px;
+    padding-right: 6px;
+}
+
+ul.sidebar-menu li a:hover i, ul.sidebar-menu li a:focus i {
+    color: #fff;
+}
+
+ul.sidebar-menu li a.active i {
+    color: #fff;
+}
+
+.icon-plus {
+    padding-left: 20px;
+    margin-bottom: 0;
+    list-style: none;
+}
+.icon-plus > li {
+    position: relative;
+    display: block;
+    margin-bottom: 5px;
+}
+.icon-plus > li > a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+
+.icon-minus {
+    padding-left: 30px;
+    margin-top: 51px;
+    list-style: none;
+}
+.icon-minus > li {
+    position: relative;
+    display: block;
+    margin-bottom: 23px;
+}
+.icon-minus > li > a {
+    position: relative;
+    display: block;
+    padding: 1px 5px;
+}
+
+/*customized table*/
+.table th {
+    text-align: center;
+}
+
+.th-width {
+    width: 20px;
+}
+
+/*
+ * Main content
+ */
+
+.main {
+    padding: 20px;
+}
+
+@media (min-width: 768px) {
+    .main {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+}
+
+.main .page-header {
+    margin-top: 0;
+}
+
+/*
+ * Placeholder platform ideas
+ */
+
+.placeholder {
+    margin-bottom: 20px;
+}
+
+.placeholder-bottom {
+    margin-top: 20px;
+}
+
+/*
+ * adjust chart size
+ */
+
+.chart-container {
+    margin: 0 auto;
+    width: 400px;
+    height: 400px;
+}
+
+/*pagination*/
+.page-total {
+    float: left;
+    margin: 10px 20px;
+}
+
+/*canvas-label*/
+.canvas-label {
+    margin: -50px 70px;
+}
+
+/*icon-space*/
+.icon-space i {
+    padding-right: 6px;
+}
+
+/*footer*/
+.site-footer {
+    background: #fff;
+    color: #797979;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0px;
+
+}
+
+/*dropDown*/
+.dropdown-menu > li > div {
+    padding: 0px 20px;
+}
+
+/*tips*/
+.tips {
+    color: #ff0000;
+}

@@ -1,0 +1,46 @@
+<div ng-controller="projectCtrl">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-11 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                <h5 class="page-header">选择项目</h5>
+                <div class="well well-lg">
+                    <div class="form-group">
+                        <label class="col-sm-2">
+                            <select class="form-control" ng-model="vm.projectName"
+                                    ng-options="projectInfo.name for projectInfo in vm.projectInfo">
+                                <option value="">-- 请选择 --</option>
+                            </select>
+                        </label>
+                        <button type="button" class="btn btn-primary" ng-click="jump()">确认</button>
+                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteProject">
+                            删除项目
+                        </button>
+                    </div>
+                    <p class="col-sm-3">您选择的项目是：{{vm.projectName.name}}</p>
+                    <div class="hidden">项目id：<span id='projectId'>{{vm.projectName.id}}</span></div>
+                    <br/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--deleteProject Modal-->
+    <div class="modal fade" id="deleteProject" tabindex="-1" role="dialog"
+         aria-labelledby="deleteModelLabel">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="deleteModelLabel">确认删除该项目？</h4>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-theme" data-dismiss="modal"
+                            ng-click="deleteProject(vm.projectName.id)">确定
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

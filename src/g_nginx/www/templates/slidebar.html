@@ -1,0 +1,294 @@
+<div ng-controller="slidebarCtrl">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="javascript:0;">有路科技测试分析平台</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="" id="configure" class="dropdown-toggle" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">高级配置
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="configure">
+                            <li>
+                                <a href="slidebar.html#taskModal" data-toggle="modal">定时任务</a>
+                            </li>
+                            <li>
+                                <a href="slidebar.html#mailModal" data-toggle="modal" ng-click="findFriend()">设置邮件</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">当前用户：<span ng-bind="currentUser"></span></a>
+                    </li>
+                    <li>
+                        <a href="slidebar.html#exitModal" data-toggle="modal">退出</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- exitModal -->
+    <div class="modal fade" id="exitModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="exit">退出</h4>
+                </div>
+                <div class="modal-body">
+                    <p>您确定退出吗？</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-theme" data-dismiss="modal" ng-click="exit()">退出</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- taskModal -->
+    <div class="modal fade" id="taskModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <form>
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" id="task">配置定时任务</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label class="control-label">请选择时间：</label>
+                            <input id="time" type="text" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="submit" class="btn btn-theme" ng-click="timing()">确定</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- mailModal -->
+    <div class="modal fade" id="mailModal" tabindex="-1" role="dialog" aria-labelledby="emailLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <form name="setMail" novalidate>
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" id="mail">设置收件人</h4>
+                    </div>
+                    <div class="modal-body">
+                        <label class="control-label">请选择收件人</label>
+                        <ul class="list-group">
+                            <li class="list-group-item" ng-repeat="friend in friendInfo">
+                                <div class="row">
+                                    <div class="col-sm-6"><input type="checkbox" value="{{friend.email}}"
+                                                                 ng-click="chooseEmail(friend.name,friend.email)"
+                                                                 id="{{friend.name}}"> {{friend.name}}
+                                    </div>
+                                    <span class="col-sm-6">邮箱：{{friend.email}}</span>
+                                </div>
+                            </li>
+                            <!--<li class="list-group-item">-->
+                            <!--<div class="row">-->
+                            <!--<div class="col-sm-6"><input type="checkbox"> 邓敏</div>-->
+                            <!--<span class="col-sm-6">邮箱：dengmin@youlu.com</span>-->
+                            <!--</div>-->
+                            <!--</li>-->
+                            <!--<li class="list-group-item">-->
+                            <!--<div class="row">-->
+                            <!--<div class="col-sm-6"><input type="checkbox"> 刘征</div>-->
+                            <!--<span class="col-sm-6">邮箱：liuzheng@youlu.com</span>-->
+                            <!--</div>-->
+                            <!--</li>-->
+                            <!--<li class="list-group-item">-->
+                            <!--<div class="row">-->
+                            <!--<div class="col-sm-6"><input type="checkbox"> 程锋</div>-->
+                            <!--<span class="col-sm-6">邮箱：chengfeng@youlu.com</span>-->
+                            <!--</div>-->
+                            <!--</li>-->
+                        </ul>
+                        <!--<form name="myForm" novalidate>-->
+                        <!--<input type="email" class="form-control" id="inputEmail" name="email" ng-model="email" placeholder="输入收件人邮箱地址" required>-->
+                        <!--<span class="tips" ng-show="myForm.email.$dirty && myForm.email.$invalid"></span>-->
+                        <!--<span ng-show="myForm.email.$error.required">邮箱是必须的。</span>-->
+                        <!--<span ng-show="myForm.email.$error.email">非法的邮箱地址。</span>-->
+                        <!--</form>-->
+                    </div>
+                    <div class="modal-footer icon-padding">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="submit" class="btn btn-theme" data-dismiss="modal" ng-click="sendEmail()">确认
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div id="sidebar" class="row">
+            <div class="col-sm-3 col-md-2 sidebar">
+                <div class="col-sm-10 sidebar-space">
+                    <ul class="nav nav-sidebar sidebar-menu">
+                        <li>
+                            <a href="" ng-click='toProject()'><i class="fa fa-dashboard"></i>选择项目</a>
+                        </li>
+                        <li>
+                            <a href="" ng-click="toCurrentResult()" type="button" data-toggle="collapse" data-target="#content,#minus"
+                               aria-expanded="false" aria-controls="content">
+                                <i class="fa fa-desktop"></i>当前项目【<span ng-bind="vm.projectName"></span>】
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav nav-sidebar collapse sidebar-menu sub" id="content">
+                        <li>
+                            <a href="" ng-click='toCase()'><i class="fa fa-tasks"></i>用例模版</a>
+                        </li>
+                        <li ng-repeat='module in modules'>
+                            <a href="" ng-click='toModules(module.name)'><i class="fa fa-tasks"></i>{{module.name}}</a>
+                            <!--<a title="删除模块" data-toggle="modal" data-target="#deleteModal"><i class="fa fa-minus"></i></a>-->
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-2">
+                    <ul class="icon-plus nav-sidebar">
+                        <li>
+                            <a href="slidebar.html#newProject" data-toggle="modal" id="plusProject" title="新增项目"><i class="fa fa-plus"></i></a>
+                        </li>
+                        <li>
+                            <a href="slidebar.html#newModel" data-toggle="modal" id="plusModel" title="新增模块"><i class="fa fa-plus"></i></a>
+                        </li>
+                    </ul>
+                    <ul class="icon-minus nav-sidebar collapse" id="minus">
+                        <br/>
+                        <!--<br/>-->
+                        <li ng-repeat='i in modules'><a href="slidebar.html#deleteModal" data-toggle="modal" title="删除模块"
+                                                        ng-click="delModule(i.name)"><i class="fa fa-minus"></i></a>
+                        </li>
+                        <!--<li><a title="删除模块" data-toggle="modal" data-target="#deleteModal"><i class="fa fa-minus"></i></a></li>-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!--newProject Modal-->
+        <div class="modal fade" id="newProject" tabindex="-1" role="dialog" aria-labelledby="newProjectLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <form id="addProjectLabel" class="showcase-form" name="addProjectLabel" novalidate>
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="newProjectLabel">新增项目</h4>
+                        </div>
+                        <div class="modal-body table-responsive">
+                            <div class="form-group">
+                                <label class="control-label"><span class="tips">*</span>项目名称</label>
+                                <input type="text" class="form-control" id="inputProjectName" name="inputProjectName"
+                                       ng-model="name" placeholder="输入项目名称" ng-maxlength="10" required>
+                                <span class="tips"
+                                      ng-show="addProjectLabel.inputProjectName.$dirty && addProjectLabel.inputProjectName.$invalid">
+                                    <span ng-show="addProjectLabel.inputProjectName.$error.required">项目名称不能为空!</span>
+                                    <span ng-show="addProjectLabel.inputProjectName.$error.maxlength">项目名称不能大于10个字符!</span>
+                                </span>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label"><span class="tips">*</span>项目描述</label>
+                                <textarea rows="3" class="form-control" id="inputProjectInfo" name="inputProjectInfo"
+                                          ng-model="desc" placeholder="输入项目描述" required></textarea>
+                                <span class="tips"
+                                      ng-show="addProjectLabel.inputProjectInfo.$dirty && addProjectLabel.inputProjectInfo.$invalid">
+                                    <span ng-show="addProjectLabel.inputProjectInfo.$error.required">项目描述不能为空!</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                            <button type="submit" class="btn btn-theme" data-dismiss="modal" ng-click='addProject()'
+                                    ng-disabled="addProjectLabel.$invalid">确定
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!--newModel Modal-->
+        <div class="modal fade" id="newModel" tabindex="-1" role="dialog" aria-labelledby="newModelLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <form id="addModelLabel" class="showcase-form" name="addModelLabel" novalidate>
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="newModelLabel">新增模块</h4>
+                        </div>
+                        <div class="modal-body table-responsive">
+                            <div class="form-group">
+                                <label class="control-label"><span class="tips">*</span>模块名称</label>
+                                <input type="text" class="form-control" id="inputModelName" name="inputModelName"
+                                       placeholder="输入模块名称" ng-model="inputModelName" required ng-maxlength="10">
+                                <span class="tips"
+                                      ng-show="addModelLabel.inputModelName.$dirty && addModelLabel.inputModelName.$invalid">
+                                    <span ng-show="addModelLabel.inputModelName.$error.required">模块名称不能为空!</span>
+                                    <span ng-show="addModelLabel.inputModelName.$error.maxlength">模块名称不能大于10个字符!</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                            <button type="submit" class="btn btn-theme" data-dismiss="modal" ng-click="addModule()"
+                                    ng-disabled="addModelLabel.$invalid">确定
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!--deleteModel Modal-->
+        <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog"
+             aria-labelledby="deleteModelLabel">
+            <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="deleteModelLabel">确认删除该模块？</h4>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-theme" data-dismiss="modal" ng-click="ensure()">确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="site-footer col-xs-12">
+            <div class="text-center">
+                Copyright © 2017
+                <a href="javascript:0;">有路科技</a> All rights reserved
+            </div>
+        </footer>
+    </div>
+</div>
+<div ui-view></div>

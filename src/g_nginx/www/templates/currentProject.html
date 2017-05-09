@@ -1,0 +1,26 @@
+<div ng-controller="currentProjectCtrl">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                <h5 class="page-header">当前项目【<span ng-bind="vm.projectName"></span>】</h5>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">项目描述</div>
+                    <div class="panel-body" ng-bind='desc'></div>
+
+                    <div class="panel-heading">测试结果分析</div>
+                    <div class="panel-body chart-container">
+                        <canvas id="doughnut" class="chart chart-doughnut" chart-data="data"
+                                chart-labels="labels" chart-options="options">
+                        </canvas>
+                        <div class="canvas-label">
+                            <p>成功次数：<span ng-bind="data[0]"></span></p>
+                            <p>失败次数：<span ng-bind="data[1]"></span></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

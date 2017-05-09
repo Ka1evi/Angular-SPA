@@ -1,0 +1,7 @@
+flask
+gunicorn
+redis
+pymongo
+Flask-Cors
+requests
+celery

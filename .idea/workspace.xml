@@ -1,0 +1,1861 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" readonly="true" id="c425c486-943d-422b-b4b1-dce9a1cd9945" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/.codeclimate.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/.jscsrc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/.jshintignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/.jshintrc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/Dockerfile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/angular-chart.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/dist/angular-chart.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/dist/angular-chart.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/examples/amd.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/examples/amd.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/examples/app.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/examples/app.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/examples/bubble.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/examples/bubble.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/examples/charts.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/examples/charts.template.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/examples/commonjs.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/examples/commonjs.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/examples/dataset-override.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/examples/dataset-override.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/examples/scatter.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/examples/scatter.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/examples/smoothscroll.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/examples/stacked-bars.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/examples/tables.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/examples/tabs.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/examples/ticks.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/examples/webpack.commonjs.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/examples/webpack.config.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/examples/xy.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/examples/xy.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/gulpfile.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/test/fixtures/29-tabs.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/test/fixtures/29-tabs.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/test/fixtures/51-pie-update-colours.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/test/fixtures/51-pie-update-colours.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/test/fixtures/54-not-enough-colours.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/test/fixtures/54-not-enough-colours.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/test/fixtures/57-hex-colours.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/test/fixtures/57-hex-colours.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/test/fixtures/bubble.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/test/fixtures/bubble.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/test/fixtures/charts.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/test/fixtures/charts.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/test/fixtures/configure-line-chart.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/test/fixtures/configure-line-chart.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/test/fixtures/coverage.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/test/fixtures/custom-directive.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/test/fixtures/custom-directive.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/test/fixtures/dataset-override.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/test/fixtures/dataset-override.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/test/fixtures/horizontal-bar-chart.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/test/fixtures/horizontal-bar-chart.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/test/fixtures/options-override.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/test/fixtures/options-override.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/test/fixtures/scatter.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/test/fixtures/scatter.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/test/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/test/support/setup.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/test/test.integration.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/test/test.unit.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/.eslintignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/.eslintrc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/composer.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/config.jshintrc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/dist/Chart.bundle.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/dist/Chart.bundle.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/dist/Chart.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/dist/Chart.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/gulpfile.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/karma.conf.ci.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/karma.conf.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/karma.coverage.conf.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/samples/AnimationCallbacks/progress-bar.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/samples/bar-horizontal.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/samples/bar-multi-axis.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/samples/bar-stacked.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/samples/bar.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/samples/bubble.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/samples/combo-bar-line.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/samples/data_label_combo-bar-line.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/samples/different-point-sizes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/samples/doughnut.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/samples/line-cubicInterpolationMode.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/samples/line-customTooltips.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/samples/line-legend.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/samples/line-logarithmic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/samples/line-multi-axis.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/samples/line-multiline-labels.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/samples/line-non-numeric-y.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/samples/line-skip-points.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/samples/line-stacked-area.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/samples/line-stepped.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/samples/line-x-axis-filter.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/samples/line.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/samples/pie-customTooltips.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/samples/pie.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/samples/polar-area.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/samples/radar-skip-points.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/samples/radar.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/samples/scatter-logX.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/samples/scatter-multi-axis.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/samples/scatter.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/samples/timeScale/combo-time-scale.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/samples/timeScale/line-time-point-data.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/samples/timeScale/line-time-scale.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/samples/tooltip-hooks.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/scripts/release.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/src/chart.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/src/charts/Chart.Bar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/src/charts/Chart.Bubble.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/src/charts/Chart.Doughnut.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/src/charts/Chart.Line.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/src/charts/Chart.PolarArea.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/src/charts/Chart.Radar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/src/charts/Chart.Scatter.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/src/controllers/controller.bar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/src/controllers/controller.bubble.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/src/controllers/controller.doughnut.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/src/controllers/controller.line.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/src/controllers/controller.polarArea.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/src/controllers/controller.radar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/src/core/core.animation.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/src/core/core.canvasHelpers.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/src/core/core.controller.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/src/core/core.datasetController.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/src/core/core.element.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/src/core/core.helpers.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/src/core/core.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/src/core/core.layoutService.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/src/core/core.legend.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/src/core/core.plugin.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/src/core/core.scale.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/src/core/core.scaleService.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/src/core/core.title.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/src/core/core.tooltip.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/src/elements/element.arc.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/src/elements/element.line.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/src/elements/element.point.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/src/elements/element.rectangle.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/src/scales/scale.category.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/src/scales/scale.linear.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/src/scales/scale.linearbase.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/src/scales/scale.logarithmic.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/src/scales/scale.radialLinear.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/src/scales/scale.time.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/test/controller.bar.tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/test/controller.bubble.tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/test/controller.doughnut.tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/test/controller.line.tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/test/controller.polarArea.tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/test/controller.radar.tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/test/core.element.tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/test/core.helpers.tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/test/core.layoutService.tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/test/core.legend.tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/test/core.plugin.tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/test/core.scaleService.tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/test/core.title.tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/test/core.tooltip.tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/test/defaultConfig.tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/test/element.arc.tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/test/element.line.tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/test/element.point.tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/test/element.rectangle.tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/test/mockContext.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/test/scale.category.tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/test/scale.linear.tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/test/scale.logarithmic.tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/test/scale.radialLinear.tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/test/scale.time.tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/gradient.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/gradient.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular/angular-csp.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular/angular.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular/angular.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/.eslintignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/.eslintrc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/composer.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/config.jshintrc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/dist/Chart.bundle.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/dist/Chart.bundle.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/dist/Chart.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/dist/Chart.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/gulpfile.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/karma.conf.ci.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/karma.conf.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/karma.coverage.conf.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/samples/AnimationCallbacks/progress-bar.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/samples/bar-horizontal.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/samples/bar-multi-axis.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/samples/bar-stacked.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/samples/bar.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/samples/bubble.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/samples/combo-bar-line.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/samples/data_label_combo-bar-line.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/samples/different-point-sizes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/samples/doughnut.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/samples/line-cubicInterpolationMode.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/samples/line-customTooltips.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/samples/line-legend.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/samples/line-logarithmic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/samples/line-multi-axis.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/samples/line-multiline-labels.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/samples/line-non-numeric-y.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/samples/line-skip-points.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/samples/line-stacked-area.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/samples/line-stepped.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/samples/line-x-axis-filter.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/samples/line.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/samples/pie-customTooltips.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/samples/pie.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/samples/polar-area.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/samples/radar-skip-points.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/samples/radar.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/samples/scatter-logX.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/samples/scatter-multi-axis.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/samples/scatter.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/samples/timeScale/combo-time-scale.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/samples/timeScale/line-time-point-data.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/samples/timeScale/line-time-scale.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/samples/tooltip-hooks.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/scripts/release.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/src/chart.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/src/charts/Chart.Bar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/src/charts/Chart.Bubble.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/src/charts/Chart.Doughnut.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/src/charts/Chart.Line.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/src/charts/Chart.PolarArea.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/src/charts/Chart.Radar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/src/charts/Chart.Scatter.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/src/controllers/controller.bar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/src/controllers/controller.bubble.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/src/controllers/controller.doughnut.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/src/controllers/controller.line.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/src/controllers/controller.polarArea.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/src/controllers/controller.radar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/src/core/core.animation.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/src/core/core.canvasHelpers.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/src/core/core.controller.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/src/core/core.datasetController.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/src/core/core.element.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/src/core/core.helpers.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/src/core/core.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/src/core/core.layoutService.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/src/core/core.legend.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/src/core/core.plugin.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/src/core/core.scale.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/src/core/core.scaleService.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/src/core/core.title.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/src/core/core.tooltip.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/src/elements/element.arc.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/src/elements/element.line.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/src/elements/element.point.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/src/elements/element.rectangle.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/src/scales/scale.category.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/src/scales/scale.linear.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/src/scales/scale.linearbase.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/src/scales/scale.logarithmic.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/src/scales/scale.radialLinear.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/src/scales/scale.time.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/test/controller.bar.tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/test/controller.bubble.tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/test/controller.doughnut.tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/test/controller.line.tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/test/controller.polarArea.tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/test/controller.radar.tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/test/core.element.tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/test/core.helpers.tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/test/core.layoutService.tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/test/core.legend.tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/test/core.plugin.tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/test/core.scaleService.tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/test/core.title.tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/test/core.tooltip.tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/test/defaultConfig.tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/test/element.arc.tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/test/element.line.tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/test/element.point.tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/test/element.rectangle.tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/test/mockContext.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/test/scale.category.tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/test/scale.linear.tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/test/scale.logarithmic.tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/test/scale.radialLinear.tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/test/scale.time.tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chartjs-color-string/.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chartjs-color-string/color-string.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chartjs-color-string/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chartjs-color-string/test/basic.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chartjs-color/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chartjs-color/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/color-convert/.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/color-convert/component.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/color-convert/conversions.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/color-convert/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/color-convert/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/color-convert/test/basic.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/color-convert/test/speed.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/color-name/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/color-name/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/ender.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/af.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/ar-dz.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/ar-kw.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/ar-ly.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/ar-ma.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/ar-sa.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/ar-tn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/ar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/az.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/be.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/bg.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/bn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/bo.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/br.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/bs.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/ca.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/cs.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/cv.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/cy.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/da.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/de-at.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/de-ch.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/de.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/dv.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/el.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/en-au.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/en-ca.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/en-gb.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/en-ie.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/en-nz.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/eo.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/es-do.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/es.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/et.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/eu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/fa.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/fi.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/fo.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/fr-ca.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/fr-ch.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/fr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/fy.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/gd.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/gl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/gom-latn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/he.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/hi.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/hr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/hu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/hy-am.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/id.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/is.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/it.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/ja.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/jv.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/ka.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/kk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/km.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/kn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/ko.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/ky.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/lb.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/lo.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/lt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/lv.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/me.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/mi.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/mk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/ml.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/mr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/ms-my.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/ms.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/my.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/nb.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/ne.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/nl-be.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/nl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/nn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/pa-in.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/pl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/pt-br.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/pt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/ro.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/ru.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/sd.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/se.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/si.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/sk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/sl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/sq.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/sr-cyrl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/sr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/ss.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/sv.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/sw.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/ta.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/te.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/tet.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/th.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/tl-ph.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/tlh.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/tr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/tzl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/tzm-latn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/tzm.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/uk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/ur.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/uz-latn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/uz.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/vi.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/x-pseudo.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/yo.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/zh-cn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/zh-hk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale/zh-tw.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/min/locales.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/min/locales.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/min/moment-with-locales.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/min/moment-with-locales.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/min/moment.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/moment.d.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/moment.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/package.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/create/check-overflow.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/create/date-from-array.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/create/from-anything.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/create/from-array.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/create/from-object.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/create/from-string-and-array.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/create/from-string-and-format.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/create/from-string.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/create/local.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/create/parsing-flags.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/create/utc.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/create/valid.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/duration/abs.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/duration/add-subtract.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/duration/as.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/duration/bubble.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/duration/constructor.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/duration/create.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/duration/duration.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/duration/get.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/duration/humanize.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/duration/iso-string.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/duration/prototype.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/duration/valid.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/format/format.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/locale/base-config.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/locale/calendar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/locale/constructor.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/locale/en.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/locale/formats.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/locale/invalid.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/locale/lists.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/locale/locale.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/locale/locales.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/locale/ordinal.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/locale/pre-post-format.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/locale/prototype.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/locale/relative.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/locale/set.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/moment/add-subtract.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/moment/calendar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/moment/clone.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/moment/compare.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/moment/constructor.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/moment/creation-data.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/moment/diff.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/moment/format.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/moment/from.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/moment/get-set.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/moment/locale.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/moment/min-max.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/moment/moment.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/moment/now.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/moment/prototype.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/moment/start-end-of.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/moment/to-type.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/moment/to.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/moment/valid.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/parse/regex.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/parse/token.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/units/aliases.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/units/constants.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/units/day-of-month.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/units/day-of-week.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/units/day-of-year.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/units/hour.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/units/millisecond.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/units/minute.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/units/month.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/units/offset.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/units/priorities.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/units/quarter.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/units/second.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/units/timestamp.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/units/timezone.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/units/units.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/units/week-calendar-utils.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/units/week-year.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/units/week.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/units/year.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/utils/abs-ceil.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/utils/abs-floor.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/utils/abs-round.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/utils/compare-arrays.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/utils/defaults.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/utils/deprecate.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/utils/extend.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/utils/has-own-prop.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/utils/hooks.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/utils/index-of.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/utils/is-array.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/utils/is-date.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/utils/is-function.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/utils/is-number.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/utils/is-object-empty.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/utils/is-object.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/utils/is-undefined.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/utils/keys.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/utils/map.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/utils/some.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/utils/to-int.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/utils/zero-fill.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/af.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/ar-dz.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/ar-kw.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/ar-ly.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/ar-ma.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/ar-sa.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/ar-tn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/ar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/az.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/be.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/bg.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/bn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/bo.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/br.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/bs.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/ca.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/cs.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/cv.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/cy.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/da.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/de-at.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/de-ch.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/de.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/dv.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/el.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/en-au.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/en-ca.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/en-gb.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/en-ie.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/en-nz.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/eo.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/es-do.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/es.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/et.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/eu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/fa.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/fi.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/fo.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/fr-ca.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/fr-ch.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/fr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/fy.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/gd.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/gl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/gom-latn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/he.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/hi.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/hr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/hu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/hy-am.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/id.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/is.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/it.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/ja.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/jv.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/ka.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/kk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/km.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/kn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/ko.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/ky.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/lb.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/lo.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/lt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/lv.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/me.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/mi.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/mk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/ml.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/mr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/ms-my.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/ms.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/my.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/nb.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/ne.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/nl-be.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/nl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/nn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/pa-in.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/pl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/pt-br.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/pt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/ro.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/ru.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/sd.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/se.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/si.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/sk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/sl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/sq.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/sr-cyrl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/sr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/ss.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/sv.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/sw.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/ta.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/te.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/tet.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/th.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/tl-ph.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/tlh.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/tr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/tzl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/tzm-latn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/tzm.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/uk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/ur.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/uz-latn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/uz.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/vi.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/x-pseudo.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/yo.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/zh-cn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/zh-hk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale/zh-tw.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/moment.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/.dockerignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/.editorconfig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/.node-version" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/CONTRIBUTING.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/ISSUE_TEMPLATE.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/PULL_REQUEST_TEMPLATE.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/dist" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/dist/angular-chart.js.tar.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/dist/angular-chart.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/examples" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/test" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/test/fixtures" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/test/fixtures/29-tabs.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/test/fixtures/51-pie-update-colours.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/test/fixtures/54-not-enough-colours.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/test/fixtures/57-hex-colours.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/test/fixtures/bubble.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/test/fixtures/charts.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/test/fixtures/configure-line-chart.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/test/fixtures/custom-directive.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/test/fixtures/dataset-override.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/test/fixtures/horizontal-bar-chart.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/test/fixtures/options-override.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/test/fixtures/scatter.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/test/mocha.opts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/test/support" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/Dockerfile-alpine" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/.editorconfig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/CONTRIBUTING.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/LICENSE.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/MAINTAINING.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/dist" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/docs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/docs/00-Getting-Started.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/docs/01-Chart-Configuration.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/docs/02-Scales.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/docs/03-Line-Chart.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/docs/04-Bar-Chart.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/docs/05-Radar-Chart.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/docs/06-Polar-Area-Chart.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/docs/07-Pie-Doughnut-Chart.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/docs/08-Bubble-Chart.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/docs/09-Advanced.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/docs/10-Notes.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/samples" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/samples/AnimationCallbacks" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/samples/timeScale" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/scripts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/src" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/src/charts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/src/controllers" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/src/core" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/src/elements" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/src/scales" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/test" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular-chart.js/tmp/bower_components/chart.js/thankyou.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular/LICENSE.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular/angular.min.js.gzip" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/angular/angular.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/.editorconfig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/CONTRIBUTING.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/LICENSE.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/MAINTAINING.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/dist" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/docs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/docs/00-Getting-Started.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/docs/01-Chart-Configuration.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/docs/02-Scales.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/docs/03-Line-Chart.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/docs/04-Bar-Chart.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/docs/05-Radar-Chart.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/docs/06-Polar-Area-Chart.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/docs/07-Pie-Doughnut-Chart.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/docs/08-Bubble-Chart.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/docs/09-Advanced.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/docs/10-Notes.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/samples" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/samples/AnimationCallbacks" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/samples/timeScale" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/scripts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/src" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/src/charts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/src/controllers" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/src/core" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/src/elements" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/src/scales" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/test" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chart.js/thankyou.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chartjs-color-string" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chartjs-color-string/CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chartjs-color-string/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chartjs-color-string/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chartjs-color-string/test" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chartjs-color" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chartjs-color/CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chartjs-color/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/chartjs-color/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/color-convert" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/color-convert/CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/color-convert/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/color-convert/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/color-convert/test" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/color-name" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/color-name/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/color-name/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/locale" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/min" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/create" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/duration" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/format" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/locale" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/moment" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/parse" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/units" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/lib/utils" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/g_nginx/www/node_modules/moment/src/locale" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/tp.iml" afterPath="$PROJECT_DIR$/.idea/tp.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/g_nginx/www/js/controller/slidebarCtrl.js" afterPath="$PROJECT_DIR$/src/g_nginx/www/js/controller/slidebarCtrl.js" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/tp2.0.0$index.coverage" NAME="index Coverage Results" MODIFIED="1494319213292" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/dm_dm/cgi" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/g_nginx/www/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="159">
+              <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dm_dm/cgi/index.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2346">
+              <caret line="110" column="31" lean-forward="false" selection-start-line="110" selection-start-column="31" selection-end-line="110" selection-end-column="31" />
+              <folding>
+                <element signature="e#43#100#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/g_nginx/www/js/app/ui-router-config.js" />
+        <option value="$PROJECT_DIR$/src/g_nginx/www/js/controller/loginCtrl.js" />
+        <option value="$PROJECT_DIR$/src/dm_dm/lib/tp_mongodb.py" />
+        <option value="$PROJECT_DIR$/src/dm_dm/cgi/case.py" />
+        <option value="$PROJECT_DIR$/src/g_nginx/www/index.html" />
+        <option value="$PROJECT_DIR$/src/dm_dm/cgi/index.py" />
+        <option value="$PROJECT_DIR$/src/g_nginx/www/js/controller/slidebarCtrl.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1932" />
+    <option name="height" value="1066" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tp2.0.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tp2.0.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tp2.0.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tp2.0.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tp2.0.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tp2.0.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="g_nginx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tp2.0.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tp2.0.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="g_nginx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tp2.0.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tp2.0.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="g_nginx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tp2.0.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tp2.0.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="g_nginx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tp2.0.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tp2.0.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="g_nginx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tp2.0.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tp2.0.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="g_nginx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tp2.0.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tp2.0.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dm_dm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tp2.0.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tp2.0.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dm_dm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tp2.0.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tp2.0.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dm_dm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cgi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tp2.0.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tp2.0.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="doc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/dm_dm/lib" />
+    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
+    <property name="js.eslint.eslintPackage" value="" />
+    <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.index">
+    <configuration default="false" name="index" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="D:\python-2.7.12\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/dm_dm/cgi" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="tp" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/dm_dm/cgi/index.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="tp" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="tp" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PyLettuceRunConfigurationType" factoryName="Lettuce">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="tp" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <module name="tp" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="tp" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="tp" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="tp" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="tp" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="tp" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="testToRun" value="" />
+      <option name="keywords" value="" />
+      <option name="params" value="" />
+      <option name="USE_PARAM" value="false" />
+      <option name="USE_KEYWORD" value="false" />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Python.index" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Python.index" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration>C:\Users\root\AppData\Roaming\Subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="SvnFileUrlMappingImpl">
+    <option name="myMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="D:\WebStormProject\tp2.0.0" />
+          <option name="myCopyRoot" value="D:\WebStormProject\tp2.0.0" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+    <option name="myMoreRealMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="D:\WebStormProject\tp2.0.0" />
+          <option name="myCopyRoot" value="D:\WebStormProject\tp2.0.0" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c425c486-943d-422b-b4b1-dce9a1cd9945" name="Default" comment="" />
+      <created>1492572021961</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1492572021961</updated>
+      <workItem from="1493797537957" duration="42000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="42000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1932" height="1066" extended-state="0" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16179541" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32845187" sideWeight="0.50417536" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32845187" sideWeight="0.49582464" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32740587" sideWeight="0.49582464" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/g_nginx/www/templates/slidebar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="20" column="14" lean-forward="false" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/g_nginx/www/js/controller/slidebarCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1940">
+          <caret line="97" column="4" lean-forward="false" selection-start-line="97" selection-start-column="4" selection-end-line="97" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/g_nginx/www/js/app/ui-router-config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="22" column="30" lean-forward="false" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/g_nginx/www/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" column="56" lean-forward="false" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/g_nginx/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/g_nginx/www/js/controller/loginCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="20" column="33" lean-forward="false" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/g_nginx/www/templates/slidebar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="20" column="14" lean-forward="false" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/g_nginx/www/js/controller/slidebarCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1920">
+          <caret line="96" column="4" lean-forward="false" selection-start-line="96" selection-start-column="4" selection-end-line="96" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/g_nginx/www/js/app/ui-router-config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="21" column="30" lean-forward="false" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/g_nginx/www/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" column="56" lean-forward="false" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dm_dm/cgi/index.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1940">
+          <caret line="97" column="19" lean-forward="false" selection-start-line="97" selection-start-column="19" selection-end-line="97" selection-end-column="19" />
+          <folding>
+            <element signature="e#43#100#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/g_nginx/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="17" column="61" lean-forward="false" selection-start-line="17" selection-start-column="61" selection-end-line="17" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/g_nginx/www/js/controller/loginCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="20" column="68" lean-forward="false" selection-start-line="20" selection-start-column="60" selection-end-line="20" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/g_nginx/www/templates/slidebar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/g_nginx/www/js/controller/slidebarCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/g_nginx/www/js/app/ui-router-config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="20" column="26" lean-forward="false" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/g_nginx/www/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" column="56" lean-forward="false" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dm_dm/lib/tp_base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dm_dm/lib/tasks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="25" lean-forward="false" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dm_dm/cgi/index.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1860">
+          <caret line="97" column="19" lean-forward="false" selection-start-line="97" selection-start-column="19" selection-end-line="97" selection-end-column="19" />
+          <folding>
+            <element signature="e#43#100#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/g_nginx/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="17" column="61" lean-forward="true" selection-start-line="17" selection-start-column="61" selection-end-line="17" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/g_nginx/www/js/controller/loginCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="20" column="68" lean-forward="false" selection-start-line="20" selection-start-column="60" selection-end-line="20" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/g_nginx/www/templates/slidebar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/g_nginx/www/js/controller/slidebarCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/g_nginx/www/js/app/ui-router-config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="20" column="26" lean-forward="false" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/g_nginx/www/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" column="56" lean-forward="false" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dm_dm/lib/tp_base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dm_dm/lib/tasks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="25" lean-forward="false" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dm_dm/cgi/result.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="19" column="34" lean-forward="true" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dm_dm/lib/tp_redis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="12" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dm_dm/lib/tasks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="25" lean-forward="false" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/g_nginx/www/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" column="56" lean-forward="false" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/g_nginx/www/templates/slidebar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="20" column="14" lean-forward="false" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dm_dm/cgi/case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1260">
+          <caret line="66" column="24" lean-forward="false" selection-start-line="66" selection-start-column="24" selection-end-line="66" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dm_dm/cgi/case_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1265">
+          <caret line="59" column="16" lean-forward="false" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dm_dm/cgi/project.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1150">
+          <caret line="52" column="18" lean-forward="false" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dm_dm/lib/cgibase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1012">
+          <caret line="52" column="35" lean-forward="false" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/g_nginx/www/js/app/ui-router-config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/interface_tasking/main_index.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2737">
+          <caret line="119" column="23" lean-forward="false" selection-start-line="119" selection-start-column="23" selection-end-line="119" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/python-2.7.12/Lib/site-packages/xlrd/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/g_nginx/www/js/controller/currentProjectCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/g_nginx/www/js/controller/loginCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" column="8" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/g_nginx/www/js/app/url.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="24" column="49" lean-forward="false" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dm_dm/cgi/setting.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1104">
+          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/g_nginx/www/js/controller/slidebarCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="637">
+          <caret line="240" column="62" lean-forward="false" selection-start-line="240" selection-start-column="62" selection-end-line="240" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dm_dm/cgi/index.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2346">
+          <caret line="110" column="31" lean-forward="false" selection-start-line="110" selection-start-column="31" selection-end-line="110" selection-end-column="31" />
+          <folding>
+            <element signature="e#43#100#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dm_dm/lib/tp_base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-99">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dm_dm/cgi/login.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="24" lean-forward="false" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dm_dm/lib/tp_mongodb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-11799">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding>
+            <element signature="e#69#108#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/g_nginx/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

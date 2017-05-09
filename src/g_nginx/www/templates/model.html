@@ -1,0 +1,442 @@
+<div ng-controller="loginModelCtrl">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                <h5 class="page-header"><span ng-bind="vm.projectName"></span>/<span ng-bind="modelName"></span></h5>
+                <div class="well well-lg">
+                    <div class="row placeholder">
+                        <div class="col-sm-12">
+                            <div class="btn-group placeholder" role="group">
+                                <button type="button" class="btn btn-default" ng-click="getModel()">新增用例</button>
+                                <button type="button" class="btn btn-default" ng-click='delete()'>删除用例</button>
+                            </div>
+                            <div class="pull-right icon-space">
+                                <button type="button" class="btn btn-theme" data-toggle="modal"
+                                        data-target="#batchExecute" ng-click="executeBatch($event)"><i
+                                        class="glyphicon glyphicon-play-circle"></i>批量执行
+                                </button>
+                            </div>
+                            <div class="col-sm-2 input-group">
+                                <label class="input-group-addon">搜索用例</label>
+                                <input type="text" class="form-control" placeholder="请输入用例名称" ng-change="focus(text)"
+                                       ng-model='text'/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--batchExecute Modal 批量执行-->
+                    <div class="modal fade" id="batchExecute" tabindex="-1" role="dialog"
+                         aria-labelledby="batchExecuteLabel" ng-show="batchComplete">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content row">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                            aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="batchExecuteLabel">执行结果:{{batchResult}}</h4>
+                                </div>
+                                <div class="modal-body table-responsive">
+                                    <table class="table table-condensed text-center">
+                                        <caption class="col-sm-12">成功的用例({{success_num}}条)</caption>
+                                        <th class="col-sm-2">测试名称</th>
+                                        <th class="col-sm-3">测试结果</th>
+                                        <th class="col-sm-3">测试结果说明</th>
+                                        <th class="col-sm-2">测试人员</th>
+                                        <th class="col-sm-2">测试时间</th>
+                                        <tr ng-repeat="success in success_list">
+                                            <td>{{success.name}}</td>
+                                            <td>{{success.result}}</td>
+                                            <td ng-if="success.desc.Error">{{success.desc.Error}}</td>
+                                            <td ng-if="success.desc.Succeed">{{success.desc.Succeed}}</td>
+                                            <td>{{success.user}}</td>
+                                            <td>{{success.time}}</td>
+                                        </tr>
+                                    </table>
+                                    <table class="table table-condensed text-center">
+                                        <caption class="col-sm-12">失败的用例({{fail_num}}条)</caption>
+                                        <th class="col-sm-2">测试名称</th>
+                                        <th class="col-sm-3">测试结果</th>
+                                        <th class="col-sm-3">测试结果说明</th>
+                                        <th class="col-sm-2">测试人员</th>
+                                        <th class="col-sm-2">测试时间</th>
+                                        <tr ng-repeat="fail in fail_list">
+                                            <td>{{fail.name}}</td>
+                                            <td>{{fail.result}}</td>
+                                            <td ng-if="fail.desc.Error">{{fail.desc.Error}}</td>
+                                            <td ng-if="fail.desc.Succeed">{{fail.desc.Succeed}}</td>
+                                            <td>{{fail.user}}</td>
+                                            <td>{{fail.time}}</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-theme" data-dismiss="modal">确认</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--executeInfo Modal 单个执行-->
+                    <div class="modal fade" id="executeInfo" tabindex="-1" role="dialog"
+                         aria-labelledby="executeInfoLabel" ng-show="singleComplete">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content row">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                            aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="executeInfoLabel">执行结果:{{singleInfo}}</h4>
+                                </div>
+                                <div class="modal-body table-responsive">
+                                    <table class="table table-condensed text-center table-responsive">
+                                        <th class="col-sm-2">用例名称</th>
+                                        <th class="col-sm-3">测试结果</th>
+                                        <th class="col-sm-3">测试结果说明</th>
+                                        <th class="col-sm-2">测试人员</th>
+                                        <th class="col-sm-2">测试时间</th>
+                                        <tr ng-repeat='single in singleResult'>
+                                            <td>{{single.name}}</td>
+                                            <td>{{single.result}}</td>
+                                            <td ng-if="single.desc.Error">{{single.desc.Error}}</td>
+                                            <td ng-if="single.desc.Succeed">{{single.desc.Succeed}}</td>
+                                            <td>{{single.user}}</td>
+                                            <td>{{single.time}}</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-theme" data-dismiss="modal">确认</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--executeRecord Modal 执行记录-->
+                    <div class="modal fade" id="executeRecord" tabindex="-1" role="dialog"
+                         aria-labelledby="executeRecordLabel" ng-show="historyComplete">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content row">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                            aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="executeRecordLabel">执行记录</h4>
+                                </div>
+                                <div class="modal-body table-responsive">
+                                    <table class="table table-condensed text-center">
+                                        <th class="col-sm-3">测试结果</th>
+                                        <th class="col-sm-3">测试结果说明</th>
+                                        <th class="col-sm-2">测试人员</th>
+                                        <th class="col-sm-4">测试时间</th>
+                                        <tr ng-repeat='history in singleHistory'>
+                                            <td>{{history.result}}</td>
+                                            <td ng-if="history.desc.Error">{{history.desc.Error}}</td>
+                                            <td ng-if="history.desc.Succeed">{{history.desc.Succeed}}</td>
+                                            <td>{{history.user}}</td>
+                                            <td>{{history.time}}</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-theme" data-dismiss="modal">确认</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover table-bordered text-center">
+                            <thead>
+                            <tr>
+                                <th class="hidden">模块id</th>
+                                <th>序号</th>
+                                <th ng-repeat='tr in trs | headerFilter:tbodyFilter'>
+                                    {{tr}}
+                                </th>
+                                <!--<th>用例名称</th>
+                                <th>用例级别</th>
+                                <th>请求数据</th>
+                                <th>检查点</th>
+                                <th>用例详情</th>
+                                <th>定时任务</th>-->
+                                <th>用例状态</th>
+                                <th rowspan="2">操作</th>
+                                <th class="th-width">
+                                    <div class="dropdown">
+                                        <block id="select" data-toggle="dropdown" aria-haspopup="true"
+                                               aria-expanded="false">
+                                            <span class="caret"></span>
+                                        </block>
+                                        <ul class="dropdown-menu pull-right" aria-labelledby="select">
+                                            <li ng-repeat="tag in theads">
+                                                <div class="checkbox">
+                                                    <label>
+                                                        <input type="checkbox" id='{{tag.eg}}' name="{{tag.tname}}"
+                                                               ng-click="updateSelection($event,tag.eg)"> {{ tag.tname
+                                                        }}
+                                                        <!--<input type="checkbox" ng-click="chooseSelect(thead.eg,thead.tname)">{{thead.tname}}-->
+                                                    </label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr ng-repeat="item in showInfo |tableDataFilter:dataFilter">
+                                <td class="hidden">{{item.id}}</td>
+                                <td>
+                                    <input type="checkbox" ng-click="del(item.id)" name="check" id='{{item.id}}'
+                                           ng-checked='isSelected(item.id)'>{{$index + num +1}}
+                                </td>
+                                <!--<td ng-if="item.name">{{item.name}}</td>
+                                <td ng-if="item.rank">{{item.rank}}</td>
+                                <td ng-if="item.data">{{item.data}}</td>
+                                <td ng-if="item.check">{{item.check}}</td>
+                                <td ng-if="item.desc">{{item.desc}}</td>
+                                <td ng-if="item.timing">{{item.timing}}</td>-->
+
+                                <td ng-if="item.name">{{item.name}}</td>
+                                <td ng-if="item.rank">{{item.rank}}</td>
+                                <td ng-if="item.data">{{item.data}}</td>
+                                <td ng-if="item.check">{{item.check}}</td>
+                                <td ng-if="item.desc">{{item.desc}}</td>
+                                <td ng-if="item.timing">{{item.timing}}</td>
+                                <td ng-if="item.ip">{{item.ip}}</td>
+                                <td ng-if="item.url">{{item.url}}</td>
+                                <td ng-if="item.method">{{item.method}}</td>
+                                <td ng-if="item.type">{{item.type}}</td>
+
+                                <td>
+                                    <div class="icon-space">
+                                        <a href="" title="执行用例" data-toggle="modal"
+                                           data-target="#executeInfo"><i class="glyphicon glyphicon-play-circle"
+                                                                         aria-hidden="true"
+                                                                         ng-click='execute(item.id)'></i></a>
+                                        <a href="" title="执行记录" data-toggle="modal"
+                                           data-target="#executeRecord"><i class="glyphicon glyphicon-time"
+                                                                           aria-hidden="true"
+                                                                           ng-click='record(item.id)'></i></a>
+                                    </div>
+                                </td>
+                                <td colspan="2">
+                                    <div class="icon-space">
+                                        <a href="" title="编辑"><i class="glyphicon glyphicon-edit" aria-hidden="true"
+                                                         ng-click='editor(item.id)'></i></a>
+                                        <a href="" title="删除"><i class="glyphicon glyphicon-trash" aria-hidden="true"
+                                                         ng-click="delete(item.id)"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <ul class="pagination pull-right">
+                            <li>
+                                <a aria-label="First" ng-click="first()">
+                                    <span aria-hidden="true">首页</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a aria-label="Previous" ng-click="pre()">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li ng-repeat="page in pageList" ng-class="{active: isActivePage(page)}">
+                                <a ng-click="selectPage(page)">{{ page }}</a>
+                            </li>
+                            <li>
+                                <a aria-label="Next" ng-click="next()">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a aria-label="Last" ng-click="last()">
+                                    <span aria-hidden="true">尾页</span>
+                                </a>
+                            </li>
+                            <label class="page-total">{{pages}}页，共:{{total}}条记录 </label>
+                        </ul>
+                    </div>
+
+                    <div class="row placeholder-bottom" ng-class="{hidden:!hidden}">
+                        <div class="panel panel-default">
+                            <div class="col-sm-12">
+                                <h5>{{operation}}用例<span class="pull-right"><span class="glyphicon glyphicon-remove"
+                                                                                  ng-click="hidden = false"></span></span>
+                                </h5>
+                            </div>
+                            <div class="panel-body">
+                                <form class="form-horizontal showcase-form" name="loginModelForm" novalidate
+                                      ng-submit="addTemplate(operation)" id='loginModelForm'>
+                                    <div class="form-group">
+                                        <label for="inputModelName" class="col-sm-5 control-label"><span
+                                                class="tips">*</span>用例名称</label>
+                                        <div class="col-sm-2">
+                                            <input type="text" class="form-control" id="inputModelName" name="name"
+                                                   placeholder="输入用例名称" ng-model="module.name" value="{{module.name}}"
+                                                   ng-maxlength="10" required>
+                                            <span class="tips" ng-show="loginModelForm.name.$dirty && loginModelForm.name.$invalid">
+                                                <span ng-show="loginModelForm.name.$error.required">用例名称不能为空!</span>
+                                                <span ng-show="loginModelForm.name.$error.maxlength">用例名称不能大于10个字符!</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group" ng-if='!toEdit'>
+                                        <label for="selectModelType" class="col-sm-5 control-label">用例类型</label>
+                                        <div class="col-sm-2" ng-model="bar">
+                                            <select class="form-control" id="selectModelType" name="selectModelType"
+                                                    ng-options='cType as cType for cType in caseType' ng-model="mType"
+                                                    ng-change="change(mType)">
+                                                <!--<option>模板用例</option>
+                                                <option id='you' ng-model='bar'>自定义用例</option>-->
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group" ng-if='!bar'>
+                                        <label for="selectModel" class="col-sm-5 control-label">模板选择</label>
+                                        <div class="col-sm-2">
+                                            <div class="hidden" id='modelId'>{{model.id}}</div>
+                                            <select class="form-control" id="selectModel" name="cmid"
+                                                    ng-options='model.id as model.name for model in caseModel'
+                                                    ng-model='model.id'>
+                                                <!--<option>登录模板</option>
+                                                <option>注销模板</option>-->
+                                                <option value="">---请选择---</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="selectLevel" class="col-sm-5 control-label">用例级别</label>
+                                        <div class="col-sm-2">
+                                            <select class="form-control" id="selectLevel" name="rank" ng-model='rk'
+                                                    ng-options='rank as rank for rank in caseRank'>
+                                                <!--<option>BVT用例</option>
+                                                <option>xx用例</option>-->
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group" ng-if='bar'>
+                                        <label for="selectLevel" class="col-sm-5 control-label"><span
+                                                class="tips">*</span>主机IP</label>
+                                        <div class="col-sm-2">
+                                            <input type="text" class="form-control" id="inputAPIHost" name="ip"
+                                                   placeholder="127.0.0.1" ng-model="module.ip" value="{{module.ip}}"
+                                                   required>
+                                            <span class="tips" ng-show="loginModelForm.ip.$dirty && loginModelForm.ip.$invalid">
+                                                <span ng-show="loginModelForm.ip.$error.required">主机IP不能为空!</span>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group" ng-if='bar'>
+                                        <label for="selectLevel" class="col-sm-5 control-label"><span
+                                                class="tips">*</span>请求URL</label>
+                                        <div class="col-sm-2">
+                                            <input type="text" class="form-control" id="inputRequestURL" name="url"
+                                                   placeholder="login" ng-model="module.url" value="{{module.url}}"
+                                                   required>
+                                            <span class="tips" ng-show="loginModelForm.url.$dirty && loginModelForm.url.$invalid">
+                                                <span ng-show="loginModelForm.url.$error.required">请求URL不能为空!</span>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group" ng-if='bar'>
+                                        <label for="selectRequestMethod" class="col-sm-5 control-label">请求方法</label>
+                                        <div class="col-sm-2">
+                                            <select class="form-control" id="selectRequestMethod" name="method"
+                                                    ng-model='met'
+                                                    ng-options='method as method for method in caseMethod'>
+                                                <!--<option>GET</option>
+                                                <option>POST</option>-->
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group" ng-if='bar'>
+                                        <label for="selectLevel" class="col-sm-5 control-label"><span
+                                                class="tips">*</span>请求类型</label>
+                                        <div class="col-sm-2">
+                                            <input type="text" class="form-control" id="inputRequestType" name="type"
+                                                   placeholder="application/json" ng-model="module.type"
+                                                   value="{{module.type}}" required>
+                                            <span class="tips" ng-show="loginModelForm.type.$dirty && loginModelForm.type.$invalid">
+                                                <span ng-show="loginModelForm.type.$error.required">请求类型不能为空!</span>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="selectIsEncrypt" class="col-sm-5 control-label">是否加密</label>
+                                        <div class="col-sm-2">
+                                            <select class="form-control" id="selectIsEncrypt" name="encrypt"
+                                                    ng-model='enc'
+                                                    ng-options='encrypt as encrypt for encrypt in caseEncrypt'>
+                                                <!--<option>是</option>
+                                                <option>否</option>-->
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="selectIsEncrypt" class="col-sm-5 control-label">是否定时</label>
+                                        <div class="col-sm-2">
+                                            <select class="form-control" id="selectIsTiming" name="timing"
+                                                    ng-model='tim'
+                                                    ng-options='timing as timing for timing in caseTiming'>
+                                                <!--<option>是</option>
+                                                <option>否</option>-->
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="inputRequestData" class="col-sm-5 control-label"><span
+                                                class="tips">*</span>请求数据</label>
+                                        <div class="col-sm-2">
+                                            <textarea class="form-control" id="inputRequestData" rows="3" name="data"
+                                                      ng-model='module.data'
+                                                      placeholder="请输入json格式形如:{'name':'liSi', 'password':'321'}"
+                                                      required is-json>{{module.data}}</textarea>
+                                            <span class="tips" ng-show="loginModelForm.data.$dirty && loginModelForm.data.$invalid">
+                                                <span ng-show='loginModelForm.data.$error.isJson'>请求数据格式不正确!</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputCheckPoint" class="col-sm-5 control-label"><span
+                                                class="tips">*</span>检查点</label>
+                                        <div class="col-sm-2">
+                                            <textarea class="form-control" id="inputCheckPoint" rows="3" name="check"
+                                                      placeholder="请输入检查点" ng-model="module.check" required>{{module.check}}</textarea>
+                                            <span class="tips" ng-show="loginModelForm.check.$dirty && loginModelForm.check.$invalid">
+                                                <span ng-show="loginModelForm.check.$error.required">检查点不能为空!</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputRemark" class="col-sm-5 control-label"><span
+                                                class="tips">*</span>用例说明</label>
+                                        <div class="col-sm-2">
+                                            <textarea class="form-control" id="inputRemark" rows="3" name="desc"
+                                                      placeholder="请描述用例功能" ng-model="module.desc" required>{{module.desc}}</textarea>
+                                            <span class="tips" ng-show="loginModelForm.desc.$dirty && loginModelForm.desc.$invalid">
+                                                <span ng-show="loginModelForm.desc.$error.required">用例说明不能为空!</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="text-center icon-space">
+                                            <button type="submit" class="btn btn-theme"
+                                                    ng-disabled="loginModelForm.$invalid"><i
+                                                    class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></i>保存
+                                            </button>
+                                            <!--<input type="submit" value="保存" class="btn btn-theme" ng-disabled="loginModelForm.$invalid" />-->
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,201 @@
+<div ng-controller="useCaseCtrl">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                <h5 class="page-header"><span ng-bind="vm.projectName"></span>/用例模板</h5>
+                <div class="well well-lg">
+                    <div class="row placeholder">
+                        <div class="col-sm-12">
+                            <div class="btn-group placeholder" role="group">
+                                <button type="button" class="btn btn-default" ng-click="clearData()">新增模板</button>
+                                <button type="button" class="btn btn-default" ng-click='delete()'>删除模板</button>
+                            </div>
+                            <div class="pull-right icon-space">
+                                <button type="button" class="btn btn-theme" data-toggle="modal"
+                                        data-target="#uploadModal"><i class="glyphicon glyphicon-cloud-upload"></i>导入
+                                </button>
+                                <button type="button" class="btn btn-theme"><i class="glyphicon glyphicon-cloud-download"></i>导出</button>
+                            </div>
+                            <div class="col-sm-2 input-group">
+                                <label class="input-group-addon">搜索模板</label>
+                                <input type="text" class="form-control" placeholder="请输入模版名称" ng-change="focus(text)"
+                                       ng-model='text'/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- uploadModal -->
+                    <div class="modal fade" id="uploadModal" tabindex="-1" role="dialog"
+                         aria-labelledby="upLoadLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <form enctype="multipart/form-data">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal"
+                                                aria-label="Close"><span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <h4 class="modal-title" id="upLoad">导入文件</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <input type="file" id="InputFile">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">取消
+                                        </button>
+                                        <button type="submit" class="btn btn-primary" ng-click="upload()">确认</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <nav aria-label="Paging navigation">
+                        <div class="table-responsive">
+                            <table class="table table-striped table-hover table-bordered text-center">
+                                <thead>
+                                <tr>
+                                    <th class="hidden">模版id</th>
+                                    <th>序号</th>
+                                    <th>模板名称</th>
+                                    <th>主机IP</th>
+                                    <th>请求URL</th>
+                                    <th>请求方法</th>
+                                    <th>请求类型</th>
+                                    <th>操作</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr ng-repeat="item in showInfo">
+                                    <td class="hidden">{{item.id}}</td>
+                                    <td>
+                                        <input type="checkbox" ng-click="del(item.id)" name="check" id='{{item.id}}'
+                                               ng-checked='isSelected(item.id)'>{{$index + num +1}}
+                                    </td>
+                                    <td>{{item.name}}</td>
+                                    <td>{{item.ip}}</td>
+                                    <td>{{item.url}}</td>
+                                    <td>{{item.method}}</td>
+                                    <td>{{item.type}}</td>
+                                    <td>
+                                        <div class="icon-space">
+                                            <a href="" title="编辑"><i class="glyphicon glyphicon-edit" aria-hidden="true"
+                                                            ng-click='editor(item.id)'></i></a>
+                                            <a href="" title="删除"><i class="glyphicon glyphicon-trash" aria-hidden="true"
+                                                            ng-click='delete(item.id)'></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <ul class="pagination pull-right">
+                                <li>
+                                    <a aria-label="First" ng-click="first()">
+                                        <span aria-hidden="true">首页</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a aria-label="Previous" ng-click="pre()">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li ng-repeat="page in pageList" ng-class="{active: isActivePage(page)}">
+                                    <a ng-click="selectPage(page)">{{ page }}</a>
+                                </li>
+                                <li>
+                                    <a aria-label="Next" ng-click="next()">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a aria-label="Last" ng-click="last()">
+                                        <span aria-hidden="true">尾页</span>
+                                    </a>
+                                </li>
+                                <label class="page-total">{{pages}}页，共:{{total}}条记录 </label>
+                            </ul>
+                        </div>
+                    </nav>
+
+                    <div class="row placeholder-bottom " ng-class="{hidden:!hidden}">
+                        <div class="panel panel-default">
+                            <div class="col-sm-12">
+                                <h5>{{operation}}模板<span class="pull-right"><span class="glyphicon glyphicon-remove"
+                                                                                  ng-click="hidden = false"></span></span>
+                                </h5>
+                            </div>
+
+                            <div class="panel-body">
+                                <form class="form-horizontal showcase-form" name="useCaseForm"
+                                      ng-submit="addTemplate(operation)" id='useCaseForm' novalidate>
+                                    <!--<div ng-repeat="case in cases"></div>-->
+                                    <div class="form-group">
+                                        <label class="col-sm-5 control-label"><span
+                                                class="tips">*</span>模板名称</label>
+                                        <div class="col-sm-2">
+                                            <input type="text" class="form-control" name="name" placeholder="输入模板名称"
+                                                   ng-model="case.name" required value="{{case.name}}" ng-maxlength="10">
+                                            <span class="tips" ng-show="useCaseForm.name.$dirty && useCaseForm.name.$invalid">
+                                                <span ng-show="useCaseForm.name.$error.required">模板名称不能为空!</span>
+                                                <span ng-show="useCaseForm.name.$error.maxlength">模板名称不能大于10个字符!</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-5 control-label"><span
+                                                class="tips">*</span>主机IP</label>
+                                        <div class="col-sm-2">
+                                            <input type="text" class="form-control" name="ip" placeholder="输入主机IP"
+                                                   id='ip' ng-model="case.ip" required value="{{case.ip}}">
+                                            <span class="tips" ng-show="useCaseForm.ip.$dirty && useCaseForm.ip.$invalid">
+                                                <span ng-show="useCaseForm.ip.$error.required">主机IP不能为空!</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-5 control-label"><span
+                                                class="tips">*</span>请求URL</label>
+                                        <div class="col-sm-2">
+                                            <input type="text" class="form-control" name="url" placeholder="输入请求URL"
+                                                   ng-model="case.url" required value="{{case.url}}">
+                                            <span class="tips" ng-show="useCaseForm.url.$dirty && useCaseForm.url.$invalid">
+                                                <span ng-show="useCaseForm.url.$error.required">请求URL不能为空!</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="selectRequestMethod" class="col-sm-5 control-label">请求方法</label>
+                                        <div class="col-sm-2">
+                                            <select class="form-control" id="selectRequestMethod"
+                                                    name="method" ng-model='met'
+                                                    ng-options='method as method for method in caseMethod'>
+                                                <!--<option ng-selected='GET=={{case.method}}'>GET</option>
+                                                <option ng-selected='POST=={{case.method}}'>POST</option>-->
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-5 control-label">请求类型</label>
+                                        <div class="col-sm-2">
+                                            <input type="text" class="form-control" name="type" placeholder="输入请求类型"
+                                                   ng-model="case.type" value="{{case.type}}">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="text-center icon-space">
+                                            <button type="submit" class="btn btn-primary"
+                                                    ng-disabled="useCaseForm.$invalid">
+                                                <i class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></i>保存
+                                            </button>
+                                            <!--<input type="submit"  value="保存" class="btn btn-theme" ng-disabled="useCaseForm.$invalid"/>-->
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

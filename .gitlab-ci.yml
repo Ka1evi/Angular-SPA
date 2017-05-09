@@ -1,0 +1,35 @@
+#定义stages
+stages:
+  - build
+  - test
+  - deploy_test
+  - deploy_pro
+
+build:
+  stage: build
+  only:
+    - dev
+    - master
+  script:
+    - echo "build"
+
+test:
+  stage: test
+  only:
+    - dev
+  script:
+    - echo "test"
+
+deploy_test:
+  stage: deploy_test
+  only:
+    - dev
+  script:
+    - echo "deploy_test"
+
+deploy_pro:
+  stage: deploy_pro
+  only:
+    - master
+  script:
+    - echo "deploy_pro"
