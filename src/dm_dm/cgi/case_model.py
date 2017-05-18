@@ -79,7 +79,7 @@ class Ccase_model(cgibase):
         list0 = Case_model().cmquery_id_name(pid=pid)
         self.out = {"data": list0}
 
-    # 通过模块名称模糊查询指定项目模版列表，所需参数opr,pid,name
+    # 通过模块名称模糊查询指定项目模版列表，所需参数opr,pid,name,page
     def cmquery_by_name(self):
         self.log.debug("cmquery_by_name in.")
         req = self.input["input"]
@@ -87,11 +87,20 @@ class Ccase_model(cgibase):
         pid = req["pid"]
         # 模版名称
         name = req["name"]
+        # 当前页码数,第一次查询是默认为0
+        page = req["page"]
         # 每页显示条数
         limitnum = 8
-        total = Case_model().cmquery_total_by_name(pid=pid, name=name)
-        list0 = Case_model().cmquery_page_by_name(pid=pid, skip_num=0, limit_num=limitnum, name=name)
-        self.out = {"total": total, "data": list0}
+        if page:
+            # 数据库查询时跳过的条数
+            skipnum = (int(page) - 1) * limitnum
+            list0 = Case_model().cmquery_page_by_name(pid=pid, skip_num=skipnum, limit_num=limitnum, name=name)
+            self.out = {"data": list0}
+        else:
+            # 第一次查询，页码为0，查询总条数，用于前台分页
+            total = Case_model().cmquery_total_by_name(pid=pid, name=name)
+            list0 = Case_model().cmquery_page_by_name(pid=pid, skip_num=0, limit_num=limitnum, name=name)
+            self.out = {"total": total, "data": list0}
 
     # 通过id去查询用例模版,所需参数opr,id
     def cmquery_by_id(self):

@@ -2,7 +2,7 @@
  * Created by root on 2017/4/12.
  */
 
-angularApp.register.controller('projectCtrl', ['$scope','$http','projectInfo','$state','$stateParams','promise',function ($scope, $http,projectInfo,$state,$stateParams,promise) {
+angularApp.register.controller('projectCtrl', ['$scope','$http','projectInfo','$state','$stateParams','promise','$timeout', function ($scope, $http,projectInfo,$state,$stateParams,promise,$timeout) {
    var params;
    var path=env[env['get']]['project']; //获取选择项目的路径
    var url =path['project'];
@@ -49,13 +49,29 @@ angularApp.register.controller('projectCtrl', ['$scope','$http','projectInfo','$
         			var allProject=result.data.data;//更新所有项目
         			vm.projectInfo=allProject;
         			projectInfo.setAllProject(allProject);
-        			alert("删除项目成功");
+                    $scope.msg = "项目删除成功！";
+                    $timeout(function () {
+                        $('#projectAlert').modal('hide');
+                    }, 1000);
         		}else{
-        			alert('新增项目失败');
+                    $scope.msg = "项目删除失败！";
+                    angular.element(".alert").addClass("alert-danger");
+                    angular.element('.icon').addClass('glyphicon-ban-circle');
+                    $timeout(function () {
+                        $('#projectAlert').modal('hide');
+                    }, 1000);
         		}
         	}else{
         		alert(result.info);
         	}
     	})
     }
+    
+   //监听新增项目事件，更新下拉框
+    $scope.$on('updateItem',function(e,data){
+    	
+    	vm.projectInfo=data.detailData;
+    })
+     
+   
 }]);

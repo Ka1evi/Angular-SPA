@@ -1,5 +1,11 @@
 <div id="login-page" ng-controller="loginCtrl">
     <div class="container">
+
+        <!--alert-info -->
+        <div class="alert alert-success pull-right col-sm-2 icon-space fade in" ng-show="alertInfo">
+            <strong><i class="icon glyphicon glyphicon-ok-circle"></i>{{msg}}</strong>
+        </div>
+
         <form class="form-login">
             <h2 class="form-login-heading">登&nbsp&nbsp&nbsp&nbsp录</h2>
             <div class="login-wrap">
@@ -45,7 +51,7 @@
                         </div>
                         <div class="modal-body">
                             <p>输入邮箱地址来找回密码</p>
-                            <input type="email" name="mail" placeholder="邮箱地址" autofocus
+                            <input type="email" name="mail" placeholder="邮箱地址" id="findMail" autofocus
                                    class="form-control placeholder-no-fix" ng-model="mail" required>
                             <span class="tips" ng-show="checkMail.mail.$dirty && checkMail.mail.$invalid">
                                 <span ng-show="checkMail.mail.$error.required">邮箱不能为空！</span>
@@ -68,10 +74,10 @@
              class="modal fade">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <form name="register" class="showcase-form" novalidate>
+                    <form name="register" class="showcase-form" novalidate id="registerForm">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal"
-                                    aria-label="Close"><span aria-hidden="true">&times;</span>
+                                    aria-label="Close" ng-click="toReset()"><span aria-hidden="true">&times;</span>
                             </button>
                             <h4 class="modal-title" id="signUpLabel">用户注册</h4>
                         </div>
@@ -81,7 +87,7 @@
                                 <div>
                                     <input type="text" validate name="user" ng-model="user" id='registerName' method="check_name"
                                            ng-pattern="/^[A-Za-z]{1}[0-9A-Za-z_]{2,9}$/" placeholder="由字母、数字、下划线组成，以字母开头，3-10个字符"
-                                           class="form-control placeholder-no-fix" required autofocus>
+                                           class="form-control placeholder-no-fix" required>
                                     <span class="tips" ng-show="register.user.$dirty && register.user.$invalid">
                                         <span ng-show="register.user.$error.required">用户名不能为空!</span>
                                         <span ng-show="register.user.$error.pattern">用户名格式不正确!</span>
@@ -92,8 +98,8 @@
                             <div class="form-group">
                                 <label class="control-label"><span class="tips">*</span>密码</label>
                                 <div>
-                                    <input type="password" name="password1" placeholder="6-20个字符" autocomplete="off"
-                                           id='registerPwd' class="form-control placeholder-no-fix"
+                                    <input type="password" name="password1" placeholder="6-20个字符"
+                                           id='registerPwd1' class="form-control placeholder-no-fix"
                                            ng-model='firstInput' ng-minlength="6" ng-maxlength="20" required>
                                     <span class="tips"
                                           ng-show="register.password1.$dirty && register.password1.$invalid">
@@ -106,8 +112,8 @@
                             <div class="form-group">
                                 <label class="control-label"><span class="tips">*</span>确认密码</label>
                                 <div>
-                                    <input type="password" name="password2" placeholder="请再次输入密码" autocomplete="off"
-                                           class="form-control placeholder-no-fix"
+                                    <input type="password" name="password2" placeholder="请再次输入密码"
+                                           id="registerPwd2" class="form-control placeholder-no-fix"
                                            ng-disabled="register.password1.$invalid"
                                            ng-model='secondInput' required>
                                     <span class="tips"

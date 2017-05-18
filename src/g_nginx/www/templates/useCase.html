@@ -8,13 +8,14 @@
                         <div class="col-sm-12">
                             <div class="btn-group placeholder" role="group">
                                 <button type="button" class="btn btn-default" ng-click="clearData()">新增模板</button>
-                                <button type="button" class="btn btn-default" ng-click='delete()'>删除模板</button>
+                                <button type="button" class="btn btn-default" ng-click='delete()' data-toggle="modal"
+                                        data-target="#useCaseTips">删除模板</button>
                             </div>
                             <div class="pull-right icon-space">
                                 <button type="button" class="btn btn-theme" data-toggle="modal"
                                         data-target="#uploadModal"><i class="glyphicon glyphicon-cloud-upload"></i>导入
                                 </button>
-                                <button type="button" class="btn btn-theme"><i class="glyphicon glyphicon-cloud-download"></i>导出</button>
+                                <button type="button" class="btn btn-theme" ng-click="download()"><i class="glyphicon glyphicon-cloud-download"></i>导出</button>
                             </div>
                             <div class="col-sm-2 input-group">
                                 <label class="input-group-addon">搜索模板</label>
@@ -27,24 +28,40 @@
                     <!-- uploadModal -->
                     <div class="modal fade" id="uploadModal" tabindex="-1" role="dialog"
                          aria-labelledby="upLoadLabel">
-                        <div class="modal-dialog" role="document">
+                        <div class="modal-dialog modal-lg" role="document">
                             <div class="modal-content">
                                 <form enctype="multipart/form-data">
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal"
-                                                aria-label="Close"><span aria-hidden="true">&times;</span>
+                                                aria-label="Close" ng-click="closeUp()"><span aria-hidden="true">&times;</span>
                                         </button>
                                         <h4 class="modal-title" id="upLoad">导入文件</h4>
                                     </div>
                                     <div class="modal-body">
-                                        <input type="file" id="InputFile">
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">取消
-                                        </button>
-                                        <button type="submit" class="btn btn-primary" ng-click="upload()">确认</button>
+                                        <!--<input type="file" id="InputFile">-->
+                                        <!--<input id="uploadFile" name="uploadFile" type="file" multiple class="file-loading" data-preview-file-type="any" data-upload-url="#">-->
+                                        <!--<div id="errorBlock" class="help-block"></div>-->
+
+                                        <div id="dropArea" class="file-drop-zone">
+                                            <div class="file-drop-zone-title">拖拽文件到这里(每次最多5个文件)...</div>
+                                        </div>
+                                        <div>
+                                            <p>上传文件剩余: <span id="count">0</span></p>
+                                            <p>上传进度:</p><span id="result"><canvas width="700" height="20"></canvas></span>
+                                        </div>
                                     </div>
                                 </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- alert-info Modal 提示信息-->
+                    <div class="modal fade" id="useCaseTips" tabindex="-1" role="dialog" aria-labelledby="useCaseTipsLabel">
+                        <div class="modal-dialog modal-sm" role="document">
+                            <div class="modal-content">
+                                <div class="icon alert alert-success col-sm-8 icon-space fade in">
+                                    <strong><i class="glyphicon glyphicon-ok-circle"></i>{{msg}}</strong>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -69,7 +86,7 @@
                                     <td class="hidden">{{item.id}}</td>
                                     <td>
                                         <input type="checkbox" ng-click="del(item.id)" name="check" id='{{item.id}}'
-                                               ng-checked='isSelected(item.id)'>{{$index + num +1}}
+                                               ng-checked='isSelected(item.id)'> {{$index + num +1}}
                                     </td>
                                     <td>{{item.name}}</td>
                                     <td>{{item.ip}}</td>
@@ -79,9 +96,9 @@
                                     <td>
                                         <div class="icon-space">
                                             <a href="" title="编辑"><i class="glyphicon glyphicon-edit" aria-hidden="true"
-                                                            ng-click='editor(item.id)'></i></a>
+                                                                     ng-click='editor(item.id)'></i></a>
                                             <a href="" title="删除"><i class="glyphicon glyphicon-trash" aria-hidden="true"
-                                                            ng-click='delete(item.id)'></i></a>
+                                                                     ng-click='delete(item.id)'></i></a>
                                         </div>
                                     </td>
                                 </tr>
@@ -120,7 +137,7 @@
                         <div class="panel panel-default">
                             <div class="col-sm-12">
                                 <h5>{{operation}}模板<span class="pull-right"><span class="glyphicon glyphicon-remove"
-                                                                                  ng-click="hidden = false"></span></span>
+                                                                                  ng-click="hidden = false;toReset()"></span></span>
                                 </h5>
                             </div>
 
@@ -177,7 +194,10 @@
                                         <label class="col-sm-5 control-label">请求类型</label>
                                         <div class="col-sm-2">
                                             <input type="text" class="form-control" name="type" placeholder="输入请求类型"
-                                                   ng-model="case.type" value="{{case.type}}">
+                                                   ng-model="case.type" value="{{case.type}}" require>
+                                            <span class="tips" ng-show="useCaseForm.type.$dirty && useCaseForm.type.$invalid">
+                                                <span ng-show="useCaseForm.type.$error.required">请求类型不能为空!</span>
+                                            </span>
                                         </div>
                                     </div>
 
@@ -185,7 +205,8 @@
                                         <div class="text-center icon-space">
                                             <button type="submit" class="btn btn-primary"
                                                     ng-disabled="useCaseForm.$invalid">
-                                                <i class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></i>保存
+                                                <i class="glyphicon glyphicon-floppy-disk" aria-hidden="true" data-toggle="modal"
+                                                   data-target="#useCaseTips"></i>保存
                                             </button>
                                             <!--<input type="submit"  value="保存" class="btn btn-theme" ng-disabled="useCaseForm.$invalid"/>-->
                                         </div>

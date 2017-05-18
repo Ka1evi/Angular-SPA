@@ -2,11 +2,12 @@
  * Created by root on 2017/4/18.
  */
 
-angularApp.register.controller('loginCtrl', ['$state', '$scope', '$http', 'promise', 'projectInfo', function($state, $scope, $http, promise, projectInfo) {
+angularApp.register.controller('loginCtrl', ['$state', '$scope', '$http', 'promise', 'projectInfo', '$timeout',function($state, $scope, $http, promise, projectInfo,$timeout) {
 
 	var params;
 	var path=env[env['get']]['login']; //获取登录模块的路径
 	var url =path['login'];
+	// var form=document.getElementById('registerForm');
 
 	//登录
 	$scope.toSlidebar = function(obj) {
@@ -30,7 +31,13 @@ angularApp.register.controller('loginCtrl', ['$state', '$scope', '$http', 'promi
 					console.log(allProject)
 					$state.go('slidebar.project', {'detailData': allProject});
 				} else {
-					alert(result.data.msg);
+                    $scope.msg="用户名或密码错误！";
+					angular.element('.alert').addClass('alert-danger');
+                    angular.element('.icon').addClass('glyphicon-ban-circle');
+                    $scope.alertInfo = true;
+                    $timeout(function(){
+                        $scope.alertInfo = false;
+                    },1000)
 				}
 
 			} else {
@@ -42,7 +49,8 @@ angularApp.register.controller('loginCtrl', ['$state', '$scope', '$http', 'promi
 	//注册
 
 	$scope.toRegister = function() {
-
+        $scope.successed = false;
+        $scope.failed = false;
 		var registerName = angular.element('#registerName').val();
 		var registerPwd = angular.element('#registerPwd').val();
 		var registerEmail = angular.element('#registerEmail').val();
@@ -58,22 +66,59 @@ angularApp.register.controller('loginCtrl', ['$state', '$scope', '$http', 'promi
 		promise(params, url).then(function(result) {
 
 			if(result.flag) {
+
+                $scope.alertInfo = true;
 				if(0 == result.data.status) {
-					alert('注册成功');
+					$scope.msg="注册成功！";
+                    $timeout(function(){
+                        $scope.alertInfo = false;
+                    },1000)
 				} else {
-					alert('注册失败');
+					$scope.msg="注册失败！";
+                    angular.element('.alert').addClass('alert-danger');
+                    angular.element('.icon').addClass('glyphicon-ban-circle');
+                    $scope.alertInfo = true;
+                    $timeout(function(){
+                        $scope.alertInfo = false;
+                    },1000)
 				}
 
 			} else {
 				alert(result.info);
 			}
+		}).then(function(res){
+
+            //清空表单数据
+            $scope.user = '';
+            $scope.password1 = '';
+            $scope.password2 = '';
+            $scope.email = '';
+
+			// form.reset();
+			$scope.register.$setPristine();//重置表单验证状态
 		})
 	}
 
+    $scope.toReset = function () {
+
+        //清空表单数据
+		$scope.user = '';
+        $scope.password1 = '';
+        $scope.password2 = '';
+        $scope.email = '';
+
+        // form.reset();
+
+        //重置表单验证状态
+        $scope.register.$setPristine();
+    }
+
     //绑定模态框关闭事件
-	angular.element('#register').on('hide.bs.modal', function() {
+	/*angular.element('#register').on('hide.bs.modal', function() {
+		
+		$scope.register.$setPristine();//重置表单验证状态
 		angular.element('#register').find('input').val('');
-	})
+	})*/
 
 	$.backstretch("img/login-bg.jpg", {
 		transitionDuration: 200

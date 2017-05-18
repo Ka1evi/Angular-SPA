@@ -2,7 +2,7 @@
  * Created by root on 2017/4/12.
  */
 
-angularApp.register.controller('loginModelCtrl', ['$scope', '$http', 'projectInfo','$stateParams','paging','promise','formSerialization', function($scope, $http, projectInfo,$stateParams,paging,promise,formSerialization) {
+angularApp.register.controller('loginModelCtrl', ['$scope', '$http', 'projectInfo','$stateParams','paging','promise','formSerialization','$timeout', function($scope, $http, projectInfo,$stateParams,paging,promise,formSerialization,$timeout) {
 
 	var currentName = projectInfo.getProjectName();
 	if(currentName != null) {
@@ -16,13 +16,8 @@ angularApp.register.controller('loginModelCtrl', ['$scope', '$http', 'projectInf
     	return;
     }
     var modelName=$stateParams.modelName; //获取模块名称
-    
     var infoPart=$stateParams.detailCase.data;  //获取第一页模版数据
-    //var pageInfo=infoPart.slice(0,infoPart.length);//用于保存没有经过筛选的完整数据
-    
     var pageInfo=angular.fromJson(angular.toJson(infoPart));//实现数组的深拷贝,slice/concat方法不能实现深拷贝
-    //Object.freeze(pageInfo);//将对象密封
-    console.log(pageInfo === infoPart)
     
     var total=$stateParams.detailCase.total; //获取模版总数
     var projectId=$stateParams.pid;//当前项目id
@@ -35,7 +30,8 @@ angularApp.register.controller('loginModelCtrl', ['$scope', '$http', 'projectInf
     var paramsPaging={'opr':'casequery','pid':projectId,'pmodel':modelName}; //分页所需的参数
     var params; //查询模版数据需要的参数
     var editorId;//编辑的模版id
-    
+    var form=document.getElementById('loginModelForm');//获取表单
+    $scope.cp = $scope;//重新赋值作用域
     $scope.modelName=modelName;
     $scope.num=0;  //初始化序号
     $scope.hidden=false;
@@ -49,17 +45,17 @@ angularApp.register.controller('loginModelCtrl', ['$scope', '$http', 'projectInf
     $scope.caseType=['模板用例','自定义用例'];
     
     //初始化请求方法
-    $scope.met='get'; 
-    $scope.caseMethod=['get','post']; 
+    $scope.met='GET'; 
+    $scope.caseMethod=['GET','POST']; 
     
     
     //初始化加密
-    $scope.enc='no'; 
-    $scope.caseEncrypt=['yes','no']; 
+    $scope.enc='NO'; 
+    $scope.caseEncrypt=['YES','NO']; 
     
     //初始化定时
-    $scope.tim='no'; 
-    $scope.caseTiming=['yes','no']
+    $scope.tim='NO'; 
+    $scope.caseTiming=['YES','NO']
     
     //初始化操作下拉框
     $scope.trs=['用例名称','用例级别','请求数据','检查点','用例详情','定时任务','主机IP','请求URL','请求方法','请求类型'];
@@ -74,36 +70,40 @@ angularApp.register.controller('loginModelCtrl', ['$scope', '$http', 'projectInf
     //确定刚进入页面要过滤掉的数据
     $scope.tbodyFilter=['用例级别','定时任务','主机IP','请求URL','请求方法','请求类型'];//要过滤掉的表头
     $scope.dataFilter=['rank','timing','ip','url','method','type'];    //要过滤的数据的key
-    //$scope.tbodyFilter=['定时任务','用例级别'];
-    //$scope.dataFilter=['timing','rank'];
     
     $scope.total=total;
     paging(infoPart,8,$scope,total,idTemp,url,paramsPaging,pageInfo); //一进入就开始分页
     
     console.log(pageInfo)
-
+    
+    //清空并重置表单
+    function clearAndReset(){
+    	
+    	$scope.loginModelForm.$setPristine();//重置表单验证状态
+    	$scope.module={};//清空表单数据
+    	$scope.rk='BVT用例';
+    	$scope.enc='NO';
+    	$scope.tim='NO';
+    	$scope.cp.mType='模板用例';
+    	$scope.model={
+    		id:''
+    	}
+    }
+	
     //点击新增，查询所有用例模版信息
     $scope.getModel=function(){
     	
     	$scope.operation='新增';//默认是新增模版
-    	//清空表单数据
-    	angular.element('#loginModelForm').find('input').val('');
-    	angular.element('#loginModelForm').find('textarea').val('');
     	$scope.hidden=true;
     	$scope.bar=false;
     	$scope.toEdit=false;
-    	$scope.rk='BVT用例';
-    	$scope.enc='no';
-    	$scope.tim='no';
-    	$scope.mType='模板用例';
-    	$scope.model={
-    		id:''
-    	}
+    	clearAndReset();
+    	
+    	console.log($scope.mType)
     	
     	params=angular.extend({'opr':'cmquery_id_name'},{'pid':projectId})
     	var path1=env[env['get']]['case_model']; 
 		var url_1=path1['case_model'];
-        //var url_1="http://127.0.0.1:5002/cgi-bin/case_model.do";
     	
     	promise(params,url_1).then(function(result){
     		if(result.flag){
@@ -116,29 +116,47 @@ angularApp.register.controller('loginModelCtrl', ['$scope', '$http', 'projectInf
     	
     }
 
+    //关闭表单模态框
+    $scope.toReset = function () {
+        
+        $scope.hidden=false;
+        $scope.mType='';
+        clearAndReset();
+        $scope.cp.mType='模板用例';
+    }
     
-    //新增、编辑模版
+    //新增、编辑用例后保存
     $scope.addTemplate=function(operator){
+    	
+    	clearAndReset();
     	var formData=formSerialization('loginModelForm');//获取表格数据
     	var modelId=angular.element('#modelId').text(); //获取模版的id
     	formData['cmid']=modelId;
-
     	
         console.log(formData)
-    	
     	if($scope.caseModel.length == 0 && (formData['selectModelType'] !='自定义用例')){
-    		alert("没有用例模版，用例类型请选择自定义用例")
+            $scope.msg = "无用例模板，用例类型请选择自定义用例！";
+            angular.element('.alert').addClass('alert-danger');
+            angular.element('.icon').addClass('glyphicon-ban-circle');
+            $timeout(function () {
+                $('#modelTips').modal('hide');
+            }, 1000);
     		return; 
     	}
-    	
     	
     	if('新增' == operator){
     		params=angular.extend(formData,{'opr':'caseadd','pid':projectId,'pmodel':modelName,'user':username});
     		
     		//新增时，需要判断当用例类型选择了模版类型时用户是否选择了模版
-    		var modelID=$scope.model.id;
-    		if('' == modelID){
-    			alert("请选择模版");
+    		var moId=document.getElementById('modelId');
+    		var modelID=moId.innerText;
+    		if('' == modelID && formData['selectModelType'] !='自定义用例'){
+                $scope.msg = "请选择模板！";
+                angular.element('.alert').addClass('alert-danger');
+                angular.element('.icon').addClass('glyphicon-ban-circle');
+                $timeout(function () {
+                    $('#modelTips').modal('hide');
+                }, 1000);
     			return;
     		}
     		
@@ -157,12 +175,19 @@ angularApp.register.controller('loginModelCtrl', ['$scope', '$http', 'projectInf
 	        		$scope.total=total;
 	        		paging(infoPart,8,$scope,total,idTemp,url,paramsPaging,pageInfo);
         		}else{
-    				alert('操作失败')
+                    $scope.msg = "操作失败！";
+                    angular.element('.alert').addClass('alert-danger');
+                    angular.element('.icon').addClass('glyphicon-ban-circle');
+                    $timeout(function () {
+                        $('#modelTips').modal('hide');
+                    }, 1000);
     			}
         	}else{
         		alert(result.info);
         	}
         }).then(function(res){
+        	
+        	clearAndReset();
     	 	$scope.hidden=false;  //新增、编辑之后隐藏表格
     	 	
     	})
@@ -203,7 +228,12 @@ angularApp.register.controller('loginModelCtrl', ['$scope', '$http', 'projectInf
 					}
 	        		paging(infoPart,8,$scope,total,idTemp,url,paramsPaging,pageInfo);
         		}else{
-        			alert('删除失败')
+                    $scope.msg = "删除失败！";
+                    angular.element('.alert').addClass('alert-danger');
+                    angular.element('.icon').addClass('glyphicon-ban-circle');
+                    $timeout(function () {
+                        $('#modelTips').modal('hide');
+                    }, 1000);
         		}
         		
         	}else{
@@ -214,7 +244,7 @@ angularApp.register.controller('loginModelCtrl', ['$scope', '$http', 'projectInf
     
     //根据模版名称模糊查询
     $scope.focus=function(text){
-    	params=angular.extend({'opr':'casequery_by_name'},{'pid':projectId,'name':text,'pmodel':modelName});
+    	params=angular.extend({'opr':'casequery_by_name'},{'pid':projectId,'name':text,'pmodel':modelName,'page':0});
     	console.log(text)
     	promise(params,url).then(function(result){
         	
@@ -229,7 +259,7 @@ angularApp.register.controller('loginModelCtrl', ['$scope', '$http', 'projectInf
         		$scope.isSelected = function(id) {
 					return idTemp.indexOf(id) != -1;
 				}
-        		paging(infoPart,8,$scope,total,idTemp,url,paramsPaging,pageInfo);
+        		paging(infoPart,8,$scope,total,idTemp,url,params,pageInfo);
         	}else{
         		alert(result.info);
         	}
@@ -239,7 +269,7 @@ angularApp.register.controller('loginModelCtrl', ['$scope', '$http', 'projectInf
     //编辑
     $scope.editor=function(id){
     	
-    	angular.element('#loginModelForm').find('input textarea').val();
+    	clearAndReset();
     	$scope.operation='编辑';
     	$scope.toEdit=true; //编辑时不显示用例类型
     	$scope.hidden=true;
@@ -252,9 +282,9 @@ angularApp.register.controller('loginModelCtrl', ['$scope', '$http', 'projectInf
     		
     		$scope.module=result.data.data
     		$scope.rk=result.data.data.rank;
-    		$scope.met=result.data.data.method.toLowerCase();
-    		$scope.enc=result.data.data.encrypt.toLowerCase();
-    		$scope.tim=result.data.data.timing.toLowerCase();
+    		$scope.met=result.data.data.method;
+    		$scope.enc=result.data.data.encrypt;
+    		$scope.tim=result.data.data.timing;
     		$scope.module.check=angular.toJson($scope.module.check);
     		$scope.module.data=angular.toJson($scope.module.data)
     	})
@@ -269,7 +299,6 @@ angularApp.register.controller('loginModelCtrl', ['$scope', '$http', 'projectInf
     	var name = $event.target.name;
     	
     	console.log(pageInfo);
-    	//$scope.trs=['用例名称','用例级别','请求数据','检查点','用例详情','定时任务'];
     	$scope.trs=['用例名称','用例级别','请求数据','检查点','用例详情','定时任务','主机IP','请求URL','请求方法','请求类型'];
     	var tempInfo=angular.fromJson(angular.toJson(pageInfo));//实现数组的深拷贝,slice/concat方法不能实现深拷贝
     	console.log(tempInfo);
@@ -291,26 +320,12 @@ angularApp.register.controller('loginModelCtrl', ['$scope', '$http', 'projectInf
 	
 	
 	$scope.change = function(cType) {
-		/*console.log($scope.bar)
-		var sel = angular.element("#you");
-		if(sel.selected ==true){
-			$scope.bar=true;
-		}*/
 		console.log(cType)
 		if('自定义用例' == cType){
 			$scope.bar=true;
 		}else{
 			$scope.bar=false;
 		}
-		
-		//清空表单数据
-    	angular.element('#loginModelForm').find('input').val('');
-    	angular.element('#loginModelForm').find('textarea').val('');
-		//初始化下拉框
-	    $scope.rk='BVT用例';
-		$scope.met='get';
-		$scope.enc='no';
-		$scope.tim='no';
 	}
 
     //单个执行
@@ -359,7 +374,6 @@ angularApp.register.controller('loginModelCtrl', ['$scope', '$http', 'projectInf
     	}
     	
     	params=angular.extend({'opr':'executeall'},{'pid':projectId,'user':username,'model':modelName});
-    	//var url_2='http://127.0.0.1:5000/cgi-bin/result.do';
     	$scope.batchComplete=false;
     	var successArr=[];
     	var failArr=[];
@@ -400,7 +414,6 @@ angularApp.register.controller('loginModelCtrl', ['$scope', '$http', 'projectInf
     $scope.record=function(id){
     	
     	params=angular.extend({'opr':'caseresult'},{'id':id})
-    	//var url_2='http://127.0.0.1:5000/cgi-bin/result.do';
     	$scope.historyComplete=false;
     	
     	promise(params,url_2).then(function(result){

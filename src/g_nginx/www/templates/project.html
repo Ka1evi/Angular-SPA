@@ -37,10 +37,22 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
                     <button type="button" class="btn btn-theme" data-dismiss="modal"
-                            ng-click="deleteProject(vm.projectName.id)">确定
+                            ng-click="deleteProject(vm.projectName.id)" data-toggle="modal" data-target="#projectAlert">确定
                     </button>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- alert-info Modal 提示信息-->
+    <div class="modal fade" id="projectAlert" tabindex="-1" role="dialog" aria-labelledby="projectAlertLabel">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="icon alert alert-success col-sm-8 icon-space fade in">
+                    <strong><i class="glyphicon glyphicon-ok-circle"></i>{{msg}}</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>

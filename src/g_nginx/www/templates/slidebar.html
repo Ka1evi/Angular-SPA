@@ -46,14 +46,14 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                             aria-hidden="true">&times;</span>
                     </button>
-                    <h4 class="modal-title" id="exit">退出</h4>
+                    <h4 class="modal-title">退出</h4>
                 </div>
                 <div class="modal-body">
                     <p>您确定退出吗？</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                    <button type="button" class="btn btn-theme" data-dismiss="modal" ng-click="exit()">退出</button>
+                    <button type="button" class="btn btn-theme" data-dismiss="modal" ng-click="exit()">确定</button>
                 </div>
             </div>
         </div>
@@ -78,12 +78,24 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                        <button type="submit" class="btn btn-theme" ng-click="timing()">确定</button>
+                        <button type="submit" class="btn btn-theme" data-dismiss="modal" ng-click="timing()" data-toggle="modal" data-target="#alertInfo">确定</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
+
+    <!-- alert-info Modal 提示信息-->
+    <div class="modal fade" id="alertInfo" tabindex="-1" role="dialog" aria-labelledby="alertInfoLabel">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="icon alert alert-success col-sm-8 icon-space fade in">
+                    <strong><i class="glyphicon glyphicon-ok-circle"></i>{{msg}}</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- mailModal -->
     <div class="modal fade" id="mailModal" tabindex="-1" role="dialog" aria-labelledby="emailLabel">
@@ -92,7 +104,7 @@
                 <form name="setMail" novalidate>
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                                aria-hidden="true">&times;</span>
+                                aria-hidden="true" ng-click="resetMail()">&times;</span>
                         </button>
                         <h4 class="modal-title" id="mail">设置收件人</h4>
                     </div>
@@ -103,7 +115,7 @@
                                 <div class="row">
                                     <div class="col-sm-6"><input type="checkbox" value="{{friend.email}}"
                                                                  ng-click="chooseEmail(friend.name,friend.email)"
-                                                                 id="{{friend.name}}"> {{friend.name}}
+                                                                 id="{{friend.name}}" ng-model="doc.checked"> {{friend.name}}
                                     </div>
                                     <span class="col-sm-6">邮箱：{{friend.email}}</span>
                                 </div>
@@ -127,6 +139,9 @@
                             <!--</div>-->
                             <!--</li>-->
                         </ul>
+                        <span class="tips">
+                            <span class="tips" ng-show="friendCount == 0">请选择收件人！</span>
+                        </span>
                         <!--<form name="myForm" novalidate>-->
                         <!--<input type="email" class="form-control" id="inputEmail" name="email" ng-model="email" placeholder="输入收件人邮箱地址" required>-->
                         <!--<span class="tips" ng-show="myForm.email.$dirty && myForm.email.$invalid"></span>-->
@@ -135,8 +150,8 @@
                         <!--</form>-->
                     </div>
                     <div class="modal-footer icon-padding">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                        <button type="submit" class="btn btn-theme" data-dismiss="modal" ng-click="sendEmail()">确认
+                        <button type="button" class="btn btn-default" data-dismiss="modal"  ng-click="resetMail()">取消</button>
+                        <button type="submit" class="btn btn-theme" data-dismiss="modal" data-toggle="modal" data-target="#alertInfo" ng-disabled="friendCount == 0" ng-click="sendEmail()">确认
                         </button>
                     </div>
                 </form>
@@ -195,10 +210,10 @@
         <div class="modal fade" id="newProject" tabindex="-1" role="dialog" aria-labelledby="newProjectLabel">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
-                    <form id="addProjectLabel" class="showcase-form" name="addProjectLabel" novalidate>
+                    <form id="addProject" class="showcase-form" name="addProject" novalidate>
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                                    aria-hidden="true">&times;</span></button>
+                                    aria-hidden="true" ng-click="resetProject()">&times;</span></button>
                             <h4 class="modal-title" id="newProjectLabel">新增项目</h4>
                         </div>
                         <div class="modal-body table-responsive">
@@ -207,9 +222,9 @@
                                 <input type="text" class="form-control" id="inputProjectName" name="inputProjectName"
                                        ng-model="name" placeholder="输入项目名称" ng-maxlength="10" required>
                                 <span class="tips"
-                                      ng-show="addProjectLabel.inputProjectName.$dirty && addProjectLabel.inputProjectName.$invalid">
-                                    <span ng-show="addProjectLabel.inputProjectName.$error.required">项目名称不能为空!</span>
-                                    <span ng-show="addProjectLabel.inputProjectName.$error.maxlength">项目名称不能大于10个字符!</span>
+                                      ng-show="addProject.inputProjectName.$dirty && addProject.inputProjectName.$invalid">
+                                    <span ng-show="addProject.inputProjectName.$error.required">项目名称不能为空!</span>
+                                    <span ng-show="addProject.inputProjectName.$error.maxlength">项目名称不能大于10个字符!</span>
                                 </span>
                             </div>
                             <div class="form-group">
@@ -217,15 +232,15 @@
                                 <textarea rows="3" class="form-control" id="inputProjectInfo" name="inputProjectInfo"
                                           ng-model="desc" placeholder="输入项目描述" required></textarea>
                                 <span class="tips"
-                                      ng-show="addProjectLabel.inputProjectInfo.$dirty && addProjectLabel.inputProjectInfo.$invalid">
-                                    <span ng-show="addProjectLabel.inputProjectInfo.$error.required">项目描述不能为空!</span>
+                                      ng-show="addProject.inputProjectInfo.$dirty && addProject.inputProjectInfo.$invalid">
+                                    <span ng-show="addProject.inputProjectInfo.$error.required">项目描述不能为空!</span>
                                 </span>
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                            <button type="submit" class="btn btn-theme" data-dismiss="modal" ng-click='addProject()'
-                                    ng-disabled="addProjectLabel.$invalid">确定
+                            <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="resetProject()">取消</button>
+                            <button type="submit" class="btn btn-theme" data-dismiss="modal" ng-click='addItem()'
+                                    ng-disabled="addProject.$invalid" data-toggle="modal" data-target="#alertInfo">确定
                             </button>
                         </div>
                     </form>
@@ -237,9 +252,9 @@
         <div class="modal fade" id="newModel" tabindex="-1" role="dialog" aria-labelledby="newModelLabel">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
-                    <form id="addModelLabel" class="showcase-form" name="addModelLabel" novalidate>
+                    <form id="addModel" class="showcase-form" name="addModel" novalidate>
                         <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="resetModel()"><span
                                     aria-hidden="true">&times;</span></button>
                             <h4 class="modal-title" id="newModelLabel">新增模块</h4>
                         </div>
@@ -249,16 +264,16 @@
                                 <input type="text" class="form-control" id="inputModelName" name="inputModelName"
                                        placeholder="输入模块名称" ng-model="inputModelName" required ng-maxlength="10">
                                 <span class="tips"
-                                      ng-show="addModelLabel.inputModelName.$dirty && addModelLabel.inputModelName.$invalid">
-                                    <span ng-show="addModelLabel.inputModelName.$error.required">模块名称不能为空!</span>
-                                    <span ng-show="addModelLabel.inputModelName.$error.maxlength">模块名称不能大于10个字符!</span>
+                                      ng-show="addModel.inputModelName.$dirty && addModel.inputModelName.$invalid">
+                                    <span ng-show="addModel.inputModelName.$error.required">模块名称不能为空!</span>
+                                    <span ng-show="addModel.inputModelName.$error.maxlength">模块名称不能大于10个字符!</span>
                                 </span>
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="resetModel()">取消</button>
                             <button type="submit" class="btn btn-theme" data-dismiss="modal" ng-click="addModule()"
-                                    ng-disabled="addModelLabel.$invalid">确定
+                                    ng-disabled="addModel.$invalid" data-toggle="modal" data-target="#alertInfo">确定
                             </button>
                         </div>
                     </form>
@@ -278,11 +293,12 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                        <button type="button" class="btn btn-theme" data-dismiss="modal" ng-click="ensure()">确定</button>
+                        <button type="button" class="btn btn-theme" data-dismiss="modal" data-toggle="modal" data-target="#alertInfo" ng-click="ensure()">确定</button>
                     </div>
                 </div>
             </div>
         </div>
+
         <footer class="site-footer col-xs-12">
             <div class="text-center">
                 Copyright © 2017

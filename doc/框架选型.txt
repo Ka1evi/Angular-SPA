@@ -1,0 +1,10 @@
+1.前端
+	
+2.后台
+	a.数据库使用mongodb
+	b.后台使用flask web框架+gunicorn
+	c.测试工具使用python的requests库和gevent协程库
+3.说明
+	a.前端使用nginx做反向代理
+	b.后台使用gunicorn做服务器
+	c.用到的技能会涉及到docker、linux等

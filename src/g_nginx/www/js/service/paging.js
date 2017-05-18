@@ -4,7 +4,7 @@
 
 angularApp.register.provider("paging", function() {
 
-	this.$get = function($http) {
+	this.$get = function($http,promise) {
 
 		return function(info, contains, scope, total, idTemp, url, params,pageInfo) {
 			    /**
@@ -28,25 +28,19 @@ angularApp.register.provider("paging", function() {
 				//获取表格数据
 				$scope.setData = function(current) {
 					params = angular.extend(params, {'page': current})
-					$http({
-						url: url,
-						dataType: 'json',
-						headers: {
-							'Content-Type': 'application/x-www-form-urlencoded'
-						},
-						method: 'post',
-						data: params
-		
-					}).then(function(respond) {
-						$scope.showInfo = respond.data.data;
-						pageInfo=angular.fromJson(angular.toJson(respond.data.data))
-						$scope.isSelected = function(id) {
-							return idTemp.indexOf(id) != -1;
+					promise(params, url).then(function(respond) {
+
+						if(respond.flag) {
+							$scope.showInfo = respond.data.data;
+							pageInfo=angular.fromJson(angular.toJson(respond.data.data))
+							$scope.isSelected = function(id) {
+								return idTemp.indexOf(id) != -1;
+							}
+			
+						} else {
+							alert(result.info);
 						}
-		
-					}).catch(function(e) {
-						alert(e.toString())
-					})
+					});
 					
 				}
 				$scope.showInfo = info;

@@ -27,7 +27,9 @@ var env={
 			},
 			
 			'case_model':{   //用例模版
-				'case_model':devPath+'cgi-bin/case_model.do'
+				'case_model':devPath+'cgi-bin/case_model.do',
+				'upload':devPath+'cgi-bin/upload.do',  
+				'download':devPath+'cgi-bin/out.do'
 			},
 			
 			'setting':{    //高级设置
@@ -53,7 +55,9 @@ var env={
 			},
 			
 			'case_model':{   //用例模版
-				'case_model':'cgi-bin/case_model.do'
+				'case_model':'cgi-bin/case_model.do',
+				'upload':'cgi-bin/upload.do',
+				'download':'cgi-bin/out.do'
 			},
 			
 			'setting':{    //高级设置

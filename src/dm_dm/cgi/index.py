@@ -7,7 +7,7 @@ from tp_base import tp_index_dict
 from tp_base import tp_file_upload_list
 from tp_global import *
 from tp_mongodb import *
-
+from tp_read import Cread
 from gevent import monkey
 from gevent.pywsgi import WSGIServer
 monkey.patch_all()
@@ -34,7 +34,7 @@ def index_func(fun):
 '''
             else:
                 req_dict["input"] = request.args
-        else:
+        elif request.method == "POST":
 
             if fun in tp_file_upload_list:
                 req_dict["input"] = {"opr": "upload"}
@@ -46,9 +46,10 @@ def index_func(fun):
                     req_dict["input"] = json.loads(request.get_data())
                 except:
                     return g_err["refused"]
-        # else:
-        #     return g_err["refused"]
+        else:
+            return g_err["refused"]
         ip = request.headers.get('X-Real-IP')
+
         if ip is None or ip == "":
             ip = "127.0.0.1"
         ssid = request.cookies.get('ssid')
@@ -79,19 +80,23 @@ def index_func(fun):
                 c.mydel()
                 return g_err["refused"]
             file = request.files['file']
-
-
+            pid=request.form.get("pid",'')
+            typ = request.form.get("typ", '')
+            pmodel = request.form.get("pmodel", '')
+            user = request.form.get("user", '')
             filename = file.filename
             a, b = os.path.splitext(filename)
             if '.' in filename and filename.rsplit('.', 1)[1] in ret_dict["allow"]:
                 f = "%.20f" % time.time()
                 f += "%s" % b
                 file.save(ret_dict["path"] + f)
-                out = {"status": 0, "msg": "successs", "filename": f}
+                data=Cread().caread(pid,typ,f,pmodel,user)
+                out = {"status": 0, "msg": "success", "data": data}
             else:
-                out = {"status": 1, "msg": "file ext is not allow."}
+                out = {"status": 1, "msg": "文件类型错误，只支持yaml,xls,xlsx格式"}
             c.mydel()
-            return json.dumps(out, ensure_ascii=False)
+            out = json.dumps(out)
+            # return json.dumps(out, ensure_ascii=False)
 
         if c.redirect_url is not None:
             c.mydel()

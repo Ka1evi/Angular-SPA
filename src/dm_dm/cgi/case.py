@@ -137,7 +137,7 @@ class Ccase(cgibase):
         # list = Case().casequery(pid=pid,pmodel=pmodel)
         # self.out = {"data": list}
 
-    # 通过用例名称模糊查询指定项目指定模块下的用例列表，所需参数opr,pid,pmodel，name
+    # 通过用例名称模糊查询指定项目指定模块下的用例列表，所需参数opr,pid,pmodel，name,page
     def casequery_by_name(self):
         self.log.debug("casequery_by_name in.")
         req = self.input["input"]
@@ -147,11 +147,19 @@ class Ccase(cgibase):
         pmodel = req["pmodel"]
         # 用例名称
         name = req["name"]
+        # 当前页码数,第一次查询是默认为0
+        page = req["page"]
         # 每页显示条数
         limitnum = 8
-        total = Case().casequery_total_by_name(pid=pid, pmodel=pmodel, name=name)
-        list0 = Case().casequery_page_by_name(pid=pid, pmodel=pmodel, skip_num=0, limit_num=limitnum, name=name)
-        self.out = {"total": total, "data": list0}
+        if page:
+            skipnum = (int(page) - 1) * limitnum
+            list0 = Case().casequery_page_by_name(pid=pid, pmodel=pmodel, skip_num=skipnum, limit_num=limitnum, name=name)
+            self.out = {"data": list0}
+        else:
+            # 第一次查询，页码为0，查询总条数，用于前台分页
+            total = Case().casequery_total_by_name(pid=pid, pmodel=pmodel, name=name)
+            list0 = Case().casequery_page_by_name(pid=pid, pmodel=pmodel, skip_num=0, limit_num=limitnum, name=name)
+            self.out = {"total": total, "data": list0}
 
     # 编辑用例，所需参数opr,id,name,pid,pmodel,ip,url,pmethod,type,data,check,desc,timing,rank,encrypt,user,time
     def caseupdate(self):

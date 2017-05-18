@@ -7,14 +7,8 @@ sys.setdefaultencoding('utf-8')
 from tp_global import *
 from cgibase import cgibase
 from tp_mongodb import *
-# import pymongo
 import tablib
-# import random
-# import json
 
-# conn = pymongo.MongoClient('10.10.62.10', 27017)
-# db = conn.test
-# collection = db.case
 class Cout(cgibase):
     def __init__(self):
         return cgibase.__init__(self)
@@ -34,43 +28,67 @@ class Cout(cgibase):
         self.log.debug("caseout in.")
         req = self.input["input"]
         # 项目id
-        typ=req["typ"]
-        id = req["id"]
-        type1 = req["type"]
-        print typ,id
-        # 用例列表
-        if type1 == 1:
-            if isinstance(id, list):
-                for i in id:
-                    data = Case().caseout(i)
-                    f = open('case~batch~out.%s' % typ, "ab+")
-                    f.write(data.yaml)
-                    f.close
-                    self.out = {"type": '%s' % typ}
+        # ad="C:/Users/Administrator/Desktop/eee/"
+        ad = req["address"]
 
-            else:
-                data = Case().caseout(id=id)
-                # data =Case_model().modelout(id=id)
-                print data
-                f = open('mme~~out.%s'%typ, "wb")
-                if "yaml"==(typ):
-                    f.write(data.yaml)
-                    self.out = {"type": '%s' % typ}
-                else:
-                    f.write(data.xlsx)
-                    self.out = {"type": '%s' % typ}
-                f.close
+        file="The export file%s.xlsx"%  time.time()
+        if os.path.exists(ad):
+            ad=ad
         else:
-            data = Case_model().modelout(id=id)
-            print data
-            f = open('mme~~out.%s' % typ, "wb")
-            if "yaml" == (typ):
-                f.write(data.yaml)
-                self.out = {"type": '%s' % typ}
+            os.makedirs(ad)
+        ids = req["id"]
+        typ = req["typ"]
+        try:
+            f = open(ad + file, "wb")
+
+        except IOError:
+            self.out = {"status": 1,"address": "路径错误"}
+        else:
+            f.close()
+            # os.makedirs(ad)
+            # 用例列表
+            if typ == 1:
+                if isinstance(ids, list):
+                    f = open(ad + file, "wb")
+                    caselist = []
+                    for id in ids:
+                        data = Case().caseout(id)
+                        caselist.append(data)
+                        headers = ["用例编号", "请求参数", "用例名称", "检查点", "请求URL", "是否开始定时任务",
+                                   "主机IP", "用例所属模块", "请求类型", "用例最后编辑人员", "用例说明", "用例编辑时间",
+                                   "请求方法", "用例是否加密", "用例级别", "用例所属项目编号"]
+                        data1 = tablib.Dataset(*caselist, headers=headers)
+                        f.write(data1.xlsx)
+                        f.close
+                        self.out = {"status": 0,"address": ad,"filename":file}
+
+                else:
+                    data = Case().caseoneout(id=ids)
+                    # data =Case_model().modelout(id=id)
+                    f = open(ad+file, "wb")
+
+                    f.write(data.xlsx)
+                    self.out = {"status": 0,"address": ad,"filename":file}
+                    f.close
             else:
-                f.write(data.xlsx)
-                self.out = {"type": '%s' % typ}
-            f.close
+                if isinstance(ids, list):
+                    f = open(ad + file, "wb")
+                    cmlist = []
+                    for id in ids:
+                        data = Case_model().modelout(id)
+                        cmlist.append(data)
+                    headers = ["模版编号", "模版名称", "主机IP", "请求URL", "请求方法", "请求类型"]
+                    data1 = tablib.Dataset(*cmlist, headers=headers)
+                    f.write(data1.xlsx)
+                    f.close()
+
+                    self.out = {"status": 0,"address": ad, "filename": file}
+                else:
+                    data = Case_model().modeloneout(id=ids)
+                    f = open(ad+file, "wb")
+                    f.write(data.xlsx)
+                    self.out = {"status": 0,"address": ad,"filename":file}
+                    f.close
 
 if __name__ == "__main__":
     pass

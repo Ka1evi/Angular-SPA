@@ -4,7 +4,7 @@
 ##
 #连接数据库，以及与数据库的相关操作
 
-import pymongo,json,time,hashlib,tablib
+import pymongo,json,time,hashlib,tablib,yaml
 from bson.objectid import ObjectId
 
 #连接数据库
@@ -47,17 +47,17 @@ class User(object):
             lsit.append(dict1)
         return lsit
 
-    #注册用户
+    # 注册用户
     def useradd(self, name, pwd, email):
-        #验证此用户名是否存在
+        # 验证此用户名是否存在
         num = User().check_name(name)
-        #存在返回空
+        # 存在返回空
         if num:
             return
-        #不存在则注册，并返回用户ID
-        return self.db.insert({"u_name":name,
-                               "u_password":hashlib.md5(name+pwd).hexdigest(),
-                               "u_email":email})
+        # 不存在则注册，并返回用户ID
+        return self.db.insert({"u_name": name,
+                               "u_password": hashlib.md5(name + pwd).hexdigest(),
+                               "u_email": email})
 
     def check_name(self, name):
         # 验证此用户名是否存在
@@ -70,19 +70,6 @@ class User(object):
 class Project(object):
     def __init__(self):
         self.db = get_conn().project
-
-    # #新增项目
-    # def proadd(self, name, model, desc, user):
-    #     # 验证此项目是否存在
-    #     project = self.db.find({"p_name":name})
-    #     # 存在返回空
-    #     for p in project:
-    #         return
-    #     # 不存在则新增，并返回项目ID
-    #     return self.db.insert({"p_name": name,
-    #                            "p_model": model,
-    #                            "p_desc": desc,
-    #                            "p_user": user})
 
     # 新增项目
     def proadd(self, name, desc, user):
@@ -109,17 +96,6 @@ class Project(object):
             list.append(dict)
         return list
 
-    # # 查询单个项目模块、说明
-    # def proquery_model_desc(self, id):
-    #     id = ObjectId(id)
-    #     prolist = self.db.find({"_id": id},{"p_model": 1, "p_desc": 1})
-    #     # 遍历游标
-    #     for pro in prolist:
-    #         # 项目作为一个字典
-    #         dict = {"model": pro["p_model"],
-    #                 "desc": pro["p_desc"]}
-    #         return dict
-
     # 查询单个项目说明
     def proquery_desc(self, id):
         id = ObjectId(id)
@@ -137,17 +113,6 @@ class Project(object):
         # 遍历游标
         for pro in prolist:
             return pro["p_user"]
-
-    # # 编辑项目
-    # def proupdate(self, id, name, model, desc):
-    #     id = ObjectId(id)
-    #     # 得到更新操作的相关信息
-    #     dict = self.db.update({"_id":id},
-    #                    {"p_name":name,
-    #                     "p_model":model,
-    #                     "p_desc":desc})
-    #     # 返回true（更新成功）/false（更新失败）
-    #     return dict['updatedExisting']
 
     # 编辑项目
     def proupdate(self, id, name, desc, user):
@@ -175,43 +140,6 @@ class Project(object):
         # 返回查询得到的项目，没有则返回None
         for pro in project:
             return pro
-
-    # # 新增项目模块
-    # def proaddmodel(self, id, addmodel):
-    #     id = ObjectId(id)
-    #     # 通过id得到当前项目
-    #     pro = Project().proqueryone(id)
-    #     # 得到项目的模块列表
-    #     model = pro["p_model"]
-    #     # 若模块已经存在，则直接返回False
-    #     for mod in model:
-    #         if mod.encode("utf-8") == addmodel:
-    #             return False
-    #     # 在模块列表中新增模块
-    #     model.append(addmodel)
-    #     # 在数据库中更新，并返回更新信息
-    #     dict = self.db.update({"_id":id},{"$set":{"p_model":model}})
-    #     # 返回true（新增成功）/false（新增失败）
-    #     return dict["updatedExisting"]
-    #
-    # # 删除项目模块
-    # def prodeletemodel(self, id, deletemodel):
-    #     id = ObjectId(id)
-    #     # 通过id得到当前项目
-    #     pro = Project().proqueryone(id)
-    #     # 得到项目的模块列表
-    #     model = pro["p_model"]
-    #     # 若模块存在，才进行删除
-    #     for mod in model:
-    #         if mod.encode("utf-8") == deletemodel:
-    #             # 在模块列表中删除模块
-    #             model.remove(deletemodel)
-    #             # 在数据库中更新，并返回更新信息
-    #             dict = self.db.update({"_id":id},{"$set":{"p_model":model}})
-    #             # 返回true（删除成功）/false（删除失败）
-    #             return dict["updatedExisting"]
-    #     # 否则直接返回false
-    #     return False
 
 # 与模块表相关操作
 class Model(object):
@@ -287,7 +215,23 @@ class Case_model(object):
 
     def modelout(self, id):
         pid = ObjectId(id)
-        modelist = self.db.find({"cm_pid": pid})
+        modelist = self.db.find({"_id": pid})
+        print modelist
+        # 表格第一行
+        # headers = ["模版编号", "模版名称", "主机IP", "请求URL", "请求方法", "请求类型"]
+        # list = []
+        for data in modelist:
+            a = (str(data["_id"]), data["cm_name"], data["cm_ip"], data["cm_url"], data["cm_method"],
+                 data["cm_type"])
+            return a
+            # list.append(a)
+        # data = tablib.Dataset(*list, headers=headers)
+        # print data
+        # return data
+
+    def modeloneout(self, id):
+        pid = ObjectId(id)
+        modelist = self.db.find({"_id": pid})
         print modelist
         # 表格第一行
         headers = ["模版编号", "模版名称", "主机IP", "请求URL", "请求方法", "请求类型"]
@@ -297,9 +241,7 @@ class Case_model(object):
                  data["cm_type"])
             list.append(a)
         data = tablib.Dataset(*list, headers=headers)
-        print data
         return data
-
 
     def readcount(self):
         count = self.db.count()
@@ -648,13 +590,14 @@ class Case(object):
         return dict['n']
 
     # 用例~导出
-    def caseout(self, id):
+    def caseoneout(self, id):
         id = ObjectId(id)
         caselist = self.db.find({"_id": id})
         # 表格第一行
         headers = ["用例编号", "请求参数", "用例名称", "检查点", "请求URL", "是否开始定时任务",
                    "主机IP", "用例所属模块", "请求类型", "用例最后编辑人员", "用例说明", "用例编辑时间",
                    "请求方法", "用例是否加密", "用例级别", "用例所属项目编号"]
+
         list = []
         for data in caselist:
             a = (str(data["_id"]), data["c_data"], data["c_name"], data["c_check"], data["c_url"],
@@ -665,6 +608,15 @@ class Case(object):
         data = tablib.Dataset(*list, headers=headers)
         return data
 
+    def caseout(self, id):
+        pid = ObjectId(id)
+        caselist = self.db.find({"_id": pid})
+        for data in caselist:
+            a = (str(data["_id"]), data["c_data"], data["c_name"], data["c_check"], data["c_url"],
+                 data["c_timing"], data["c_ip"], data["c_pmodel"], data["c_type"], data["c_user"],
+                 data["c_desc"], data["c_time"], data["c_method"], data["c_encrypt"], data["c_rank"],
+                 str(data["c_pid"]))
+            return a
 
 
 
@@ -720,16 +672,6 @@ class Result(object):
         # 返回项目用例整体执行情况
         return {"suc_num": suc_num, "fail_num": fail_num}
 
-    # # 查询某个用例历史执行情况
-    # def caseresult(self,cid):
-    #     cid = ObjectId(cid)
-    #     # 用例测试成功的次数
-    #     suc_num = self.db.count({"r_cid": cid, "r_result": 100})
-    #     # 用例测试失败的次数
-    #     fail_num = self.db.count({"r_cid": cid, "r_result": 101})
-    #     # 返回用例历史执行情况
-    #     return {"suc_num": suc_num, "fail_num": fail_num, "total": suc_num + fail_num}
-
     # 查询某个用例历史执行情况
     def caseresult(self,cid):
         cid = ObjectId(cid)
@@ -778,61 +720,6 @@ class To_email(object):
 
 
 if __name__ == '__main__':
-    # list = Project().proquery_id_name()
-    # list = Project().proquery_model_desc("58e5a4ea94f9410cd82d655d")
-    # print list
-    # list = Case().casequery_pro_id("58e5a4ea94f9410cd82d655d")
-    # print list
-    # list = Case().casequery_model_id("58e5a4ea94f9410cd82d655d","login")
-    # print list
-
-    # print Case_model().cmquery_total_by_name("58e5a4ea94f9410cd82d655d","1")
-    # list = Case_model().cmquery_page_by_name("58e5a4ea94f9410cd82d655d",0,8,"1")
-    # for l in list:
-    #     print l['name']
-
-    # total = Case().casequery_total("58e5a4ea94f9410cd82d655d", "login")
-    # list = Case().casequery_page("58e5a4ea94f9410cd82d655d", "login", 8, 8)
-    # print total
-    # for l in list:
-    #     print l
-
-    # list = Result().caseresult("58ef373294f941a5b4f24c14")
-    # for l in list:
-    #     print l
-
-    # total = Case().casequery_total_by_name("58e5a4ea94f9410cd82d655d", "登录模块","测试")
-    # list = Case().casequery_page_by_name("58e5a4ea94f9410cd82d655d", "登录模块", 0, 8, "测试")
-    # print total
-    # for l in list:
-    #     print l["name"]
-
-    # print Timing().setting("15:46:00")
-    # name = "liuzh"
-    # pwd = "123456"
-    # print hashlib.md5(name + pwd).hexdigest()
-    #
-    # d = {"1":1,"2":2}
-    # dd = str(d)
-    # ddd = json.dumps(d)
-    # print d,dd,ddd,type(d),type(dd),type(ddd)
-
-    # d = '{"name":"man"}'
-    # try:
-    #     dd = json.loads(d)
-    # except:
-    #     print 'not dict'
-    # else:
-    #     print 1
-    # list = User().find_name_email()
-    # for l in list:
-    #     print l
-    # istrue = To_email().add_email("liuzh",["liuzhen/user@youlu","liujunlai/user@youlu"])
-    # # print istrue
-    # if istrue:
-    #     print 1
-    # else:
-    #     print 0
     a = To_email().find_email("liujl")
     if a:
         print 1
