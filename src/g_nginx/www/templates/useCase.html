@@ -59,8 +59,8 @@
                     <div class="modal fade" id="useCaseTips" tabindex="-1" role="dialog" aria-labelledby="useCaseTipsLabel">
                         <div class="modal-dialog modal-sm" role="document">
                             <div class="modal-content">
-                                <div class="icon alert alert-success col-sm-8 icon-space fade in">
-                                    <strong><i class="glyphicon glyphicon-ok-circle"></i>{{msg}}</strong>
+                                <div class="alert alert-success col-sm-8 icon-space fade in" id="useCaseAlert">
+                                    <strong><i class="icon glyphicon glyphicon-ok-circle" id="useCaseIcon"></i>{{msg}}</strong>
                                 </div>
                             </div>
                         </div>
@@ -194,7 +194,7 @@
                                         <label class="col-sm-5 control-label">请求类型</label>
                                         <div class="col-sm-2">
                                             <input type="text" class="form-control" name="type" placeholder="输入请求类型"
-                                                   ng-model="case.type" value="{{case.type}}" require>
+                                                   ng-model="case.type" value="{{case.type}}" required>
                                             <span class="tips" ng-show="useCaseForm.type.$dirty && useCaseForm.type.$invalid">
                                                 <span ng-show="useCaseForm.type.$error.required">请求类型不能为空!</span>
                                             </span>
@@ -204,9 +204,9 @@
                                     <div class="form-group">
                                         <div class="text-center icon-space">
                                             <button type="submit" class="btn btn-primary"
-                                                    ng-disabled="useCaseForm.$invalid">
-                                                <i class="glyphicon glyphicon-floppy-disk" aria-hidden="true" data-toggle="modal"
-                                                   data-target="#useCaseTips"></i>保存
+                                                    ng-disabled="useCaseForm.$invalid" data-toggle="modal"
+                                                    data-target="#useCaseTips">
+                                                <i class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></i>保存
                                             </button>
                                             <!--<input type="submit"  value="保存" class="btn btn-theme" ng-disabled="useCaseForm.$invalid"/>-->
                                         </div>

@@ -46,6 +46,10 @@ angularApp.register.controller('slidebarCtrl', ['$state', '$stateParams', '$scop
     //查看当前项目的结果信息
     $scope.toCurrentResult = function () {
 
+        if(!currentName){
+            return;
+        }
+
         params = angular.extend({'opr': 'proquery'}, {'id': projectId});
         path = env[env['get']]['project']; //获取选择项目的路径
         url = path['project'];
@@ -79,14 +83,20 @@ angularApp.register.controller('slidebarCtrl', ['$state', '$stateParams', '$scop
                     projectInfo.setAllProject(allProject);
                     $rootScope.$broadcast('updateItem', {'detailData': allProject});//向下广播项目已经更新，以便更新project.html页面的项目下拉框
                     $scope.msg = "新增项目成功！";
+                    setStyle('slidebarAlert','slidebarIcon',true);
+                    //document.getElementById('slidebarAlert').className = "alert alert-success col-sm-8 icon-space fade in";
+                    // document.getElementById('slidebarIcon').className = "icon glyphicon glyphicon-ok-circle";
                     $scope.alertInfo = true;
                     $timeout(function () {
                         $('#alertInfo').modal('hide');
                     }, 1000);
                 } else {
                     $scope.msg = "新增项目失败！";
-                    angular.element('.alert').addClass('alert-danger');
-                    angular.element('.icon').addClass('glyphicon-ban-circle');
+                    setStyle('slidebarAlert','slidebarIcon',false);
+                    //document.getElementById('slidebarAlert').className = "alert alert-danger col-sm-8 icon-space fade in";
+                    //document.getElementById('slidebarIcon').className = "icon glyphicon glyphicon-ban-circle";
+                    //angular.element('.alert').addClass('alert-danger');
+                    //angular.element('.icon').addClass('glyphicon-ban-circle');
                     $scope.alertInfo = true;
                     $timeout(function () {
                         $('#alertInfo').modal('hide');
@@ -121,8 +131,20 @@ angularApp.register.controller('slidebarCtrl', ['$state', '$stateParams', '$scop
         if(!currentName){
 
             $scope.msg = "请选择项目";
+            setStyle('slidebarAlert','slidebarIcon',false);
+            //document.getElementById('slidebarAlert').className = "alert alert-danger col-sm-8 icon-space fade in";
+            // document.getElementById('slidebarIcon').className = "icon glyphicon glyphicon-ban-circle";
+            //angular.element('.alert').addClass('alert-danger');
+            //angular.element('.icon').addClass('glyphicon-ban-circle');
             $timeout(function () {
                 $('#alertInfo').modal('hide');
+
+                //清空新增模块的表单数据
+                $scope.inputModelName = '';
+                $scope.inputProjectInfo = '';
+
+                //重置新增模块的表单验证状态
+                $scope.addModel.$setPristine();
             }, 1000);
 
             return;
@@ -142,13 +164,19 @@ angularApp.register.controller('slidebarCtrl', ['$state', '$stateParams', '$scop
                     $scope.modules = result.data.model;
                     projectInfo.setModules($scope.modules); //更新项目中的模块
                     $scope.msg = "新增模块成功！";
+                    setStyle('slidebarAlert','slidebarIcon',true);
+                    //document.getElementById('slidebarAlert').className = "alert alert-success col-sm-8 icon-space fade in";
+                    //document.getElementById('slidebarIcon').className = "icon glyphicon glyphicon-ok-circle";
                     $timeout(function () {
                         $('#alertInfo').modal('hide');
                     }, 1000);
                 } else {
                     $scope.msg = "新增模块失败！";
-                    angular.element('.alert').addClass('alert-danger');
-                    angular.element('.icon').addClass('glyphicon-ban-circle');
+                    setStyle('slidebarAlert','slidebarIcon',false);
+                    //document.getElementById('slidebarAlert').className = "alert alert-danger col-sm-8 icon-space fade in";
+                    //document.getElementById('slidebarIcon').className = "icon glyphicon glyphicon-ban-circle";
+                    //angular.element('.alert').addClass('alert-danger');
+                    //angular.element('.icon').addClass('glyphicon-ban-circle');
                     $timeout(function () {
                         $('#alertInfo').modal('hide');
                     }, 1000);
@@ -156,9 +184,11 @@ angularApp.register.controller('slidebarCtrl', ['$state', '$stateParams', '$scop
             } else {
                 alert(result.info);
             }
+
             //清空新增模块的表单数据
             $scope.inputModelName = '';
             $scope.inputProjectInfo = '';
+
             //重置新增模块的表单验证状态
             $scope.addModel.$setPristine();
         });
@@ -175,7 +205,7 @@ angularApp.register.controller('slidebarCtrl', ['$state', '$stateParams', '$scop
     }
 
     $scope.toProject = function () {
-        console.log($scope.modules)
+        allProject=projectInfo.getAllProject();
         $state.go('slidebar.project', {'detailData': allProject});
     }
 
@@ -246,13 +276,24 @@ angularApp.register.controller('slidebarCtrl', ['$state', '$stateParams', '$scop
                     $scope.modules = result.data.model;
                     projectInfo.setModules(result.data.model);
                     $scope.msg = "删除模块成功！";
+                    setStyle('slidebarAlert','slidebarIcon',true);
+                    // angular.element('.alert').removeClass('alert-danger');
+                    //angular.element('.icon').removeClass('glyphicon-ban-circle');
+
+                    //document.getElementById('slidebarAlert').className = "alert alert-success col-sm-8 icon-space fade in";
+                    //document.getElementById('slidebarIcon').className = "icon glyphicon glyphicon-ok-circle";
+                    //angular.element('.icon').addClass('glyphicon-ban-circle');
+
                     $timeout(function () {
                         $('#alertInfo').modal('hide');
                     }, 1000);
                 } else {
                     $scope.msg = "删除模块失败！";
-                    angular.element('.alert').addClass('alert-danger');
-                    angular.element('.icon').addClass('glyphicon-ban-circle');
+                    setStyle('slidebarAlert','slidebarIcon',false);
+                    //angular.element('.alert').addClass('alert-danger');
+                    //document.getElementById('slidebarAlert').className = "alert alert-danger col-sm-8 icon-space fade in";
+                    //document.getElementById('slidebarIcon').className = "icon glyphicon glyphicon-ban-circle";
+                    //angular.element('.icon').addClass('glyphicon-ban-circle');
                     $timeout(function () {
                         $('#alertInfo').modal('hide');
                     }, 1000);
@@ -276,13 +317,19 @@ angularApp.register.controller('slidebarCtrl', ['$state', '$stateParams', '$scop
             if (result.flag) {
                 if (0 == result.data.status) {
                     $scope.msg = "定时任务设置成功！";
+                    setStyle('slidebarAlert','slidebarIcon',true);
+                    //document.getElementById('slidebarAlert').className = "alert alert-success col-sm-8 icon-space fade in";
+                    //document.getElementById('slidebarIcon').className = "icon glyphicon glyphicon-ok-circle";
                     $timeout(function () {
                         $('#alertInfo').modal('hide');
                     }, 1000);
                 } else {
                     $scope.msg = "定时任务设置失败！";
-                    angular.element('.alert').addClass('alert-danger');
-                    angular.element('.icon').addClass('glyphicon-ban-circle');
+                    setStyle('slidebarAlert','slidebarIcon',false);
+                    //document.getElementById('slidebarAlert').className = "alert alert-danger col-sm-8 icon-space fade in";
+                    //document.getElementById('slidebarIcon').className = "icon glyphicon glyphicon-ban-circle";
+                    //angular.element('.alert').addClass('alert-danger');
+                    //angular.element('.icon').addClass('glyphicon-ban-circle');
                     $timeout(function () {
                         $('#alertInfo').modal('hide');
                     }, 1000);
@@ -344,13 +391,15 @@ angularApp.register.controller('slidebarCtrl', ['$state', '$stateParams', '$scop
             if (result.flag) {
                 if (0 == result.data.status) {
                     $scope.msg = "设置收件人成功！";
+                    setStyle('slidebarAlert','slidebarIcon',true);
                     $timeout(function () {
                         $('#alertInfo').modal('hide');
                     }, 1000);
                 } else {
                     $scope.msg = "设置收件人失败！";
-                    angular.element('.alert').addClass('alert-danger');
-                    angular.element('.icon').addClass('glyphicon-ban-circle');
+                    setStyle('slidebarAlert','slidebarIcon',false);
+                    //angular.element('.alert').addClass('alert-danger');
+                    //angular.element('.icon').addClass('glyphicon-ban-circle');
                     $timeout(function () {
                         $('#alertInfo').modal('hide');
                     }, 1000);
@@ -380,8 +429,17 @@ angularApp.register.controller('slidebarCtrl', ['$state', '$stateParams', '$scop
 
     //exit
     $scope.exit = function () {
+
+        // 退出清空projectInfo服务的数据，防止退出再登陆时数据还存在
+        projectInfo.setProjectName('');
+        projectInfo.setModelId('');
+        projectInfo.setUserName('');
+        projectInfo.setModules('');
+        projectInfo.setAllProject('');
+        projectInfo.setFromPage('');
+
         $state.go('login');
-        angular.element('.modal-backdrop').remove();//移除模态框遮罩层
+        // angular.element('.modal-backdrop').remove();//移除模态框遮罩层
     }
 
     //format time
@@ -390,4 +448,33 @@ angularApp.register.controller('slidebarCtrl', ['$state', '$stateParams', '$scop
     //settings bg
     $.backstretch("img/bg-white.jpg", {transitionDuration: 200});
 
+    //监听项目删除事件，当删除项目时更新当前项目下拉框的信息
+    $scope.$on('updateCurrentName',function(e,data){
+
+    	var delProjectName=data.itemName;
+    	if(delProjectName == currentName){
+    		projectInfo.setProjectName("");
+    		$scope.modules={};
+    		$scope.vm = {
+                projectName: ""
+            }
+    	}
+    })
+
 }]);
+
+/**
+ * 切换提示样式
+ * id_alert:弹框文字的id
+ * id_icon:图标的id
+ *
+ */
+function setStyle(id_alert,id_icon,flag) {
+    if(flag){
+        document.getElementById(id_alert).className = "alert alert-success col-sm-8 icon-space fade in";
+        document.getElementById(id_icon).className = "icon glyphicon glyphicon-ok-circle";
+    }else{
+        document.getElementById(id_alert).className = "alert alert-danger col-sm-8 icon-space fade in";
+        document.getElementById(id_icon).className = "icon glyphicon glyphicon-ban-circle";
+    }
+}

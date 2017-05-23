@@ -89,10 +89,17 @@ angularApp.register.controller('useCaseCtrl', ['$scope', '$http', 'projectInfo',
                     $scope.total = result.data.total;
                     total = $scope.total;
                     paging(infoPart, 8, $scope, total, idTemp, url, paramsPaging);
+                    $scope.msg = "新增成功！";
+                    setStyle('useCaseAlert','useCaseIcon',true);
+                    $timeout(function () {
+                        $('#useCaseTips').modal('hide');
+                    }, 1000);
                 } else {
-                    $scope.msg = "操作失败！";
-                    angular.element('.alert').addClass('alert-danger');
-                    angular.element('.icon').addClass('glyphicon-ban-circle');
+                    $scope.msg = "新增失败！";
+                    //$scope.useCaseTips=true;
+                    setStyle('useCaseAlert','useCaseIcon',false);
+                    //angular.element('.alert').addClass('alert-danger');
+                    //angular.element('.icon').addClass('glyphicon-ban-circle');
                     $timeout(function () {
                         $('#useCaseTips').modal('hide');
                     }, 1000);
@@ -157,8 +164,9 @@ angularApp.register.controller('useCaseCtrl', ['$scope', '$http', 'projectInfo',
                     paging(infoPart, 8, $scope, total, idTemp, url, paramsPaging);
                 } else {
                     $scope.msg = "删除失败！";
-                    angular.element('.alert').addClass('alert-danger');
-                    angular.element('.icon').addClass('glyphicon-ban-circle');
+                    setStyle('useCaseAlert','useCaseIcon',false);
+                    //angular.element('.alert').addClass('alert-danger');
+                    //angular.element('.icon').addClass('glyphicon-ban-circle');
                     $timeout(function () {
                         $('#useCaseTips').modal('hide');
                     }, 1000);
@@ -316,5 +324,20 @@ angularApp.register.controller('useCaseCtrl', ['$scope', '$http', 'projectInfo',
             }
         })
     }
-
 }]);
+
+/**
+ * 切换提示样式
+ * id_alert:弹框文字的id
+ * id_icon:图标的id
+ *
+ */
+function setStyle(id_alert,id_icon,flag) {
+    if(flag){
+        document.getElementById(id_alert).className = "alert alert-success col-sm-8 icon-space fade in";
+        document.getElementById(id_icon).className = "icon glyphicon glyphicon-ok-circle";
+    }else{
+        document.getElementById(id_alert).className = "alert alert-danger col-sm-8 icon-space fade in";
+        document.getElementById(id_icon).className = "icon glyphicon glyphicon-ban-circle";
+    }
+}

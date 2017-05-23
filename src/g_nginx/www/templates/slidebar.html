@@ -31,7 +31,7 @@
                         <a href="">当前用户：<span ng-bind="currentUser"></span></a>
                     </li>
                     <li>
-                        <a href="slidebar.html#exitModal" data-toggle="modal">退出</a>
+                        <a href="" ng-click="exit()">退出</a>
                     </li>
                 </ul>
             </div>
@@ -39,25 +39,25 @@
     </nav>
 
     <!-- exitModal -->
-    <div class="modal fade" id="exitModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel">
-        <div class="modal-dialog modal-sm" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                            aria-hidden="true">&times;</span>
-                    </button>
-                    <h4 class="modal-title">退出</h4>
-                </div>
-                <div class="modal-body">
-                    <p>您确定退出吗？</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                    <button type="button" class="btn btn-theme" data-dismiss="modal" ng-click="exit()">确定</button>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!--<div class="modal fade" id="exitModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel">-->
+        <!--<div class="modal-dialog modal-sm" role="document">-->
+            <!--<div class="modal-content">-->
+                <!--<div class="modal-header">-->
+                    <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span-->
+                            <!--aria-hidden="true">&times;</span>-->
+                    <!--</button>-->
+                    <!--<h4 class="modal-title">退出</h4>-->
+                <!--</div>-->
+                <!--<div class="modal-body">-->
+                    <!--<p>您确定退出吗？</p>-->
+                <!--</div>-->
+                <!--<div class="modal-footer">-->
+                    <!--<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>-->
+                    <!--<button type="button" class="btn btn-theme" data-dismiss="modal" ng-click="exit()">确定</button>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
 
     <!-- taskModal -->
     <div class="modal fade" id="taskModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel">
@@ -89,8 +89,8 @@
     <div class="modal fade" id="alertInfo" tabindex="-1" role="dialog" aria-labelledby="alertInfoLabel">
         <div class="modal-dialog modal-sm" role="document">
             <div class="modal-content">
-                <div class="icon alert alert-success col-sm-8 icon-space fade in">
-                    <strong><i class="glyphicon glyphicon-ok-circle"></i>{{msg}}</strong>
+                <div class="alert alert-success col-sm-8 icon-space fade in" id="slidebarAlert">
+                    <strong><i class="icon glyphicon glyphicon-ok-circle" id="slidebarIcon"></i>{{msg}}</strong>
                 </div>
             </div>
         </div>
@@ -177,7 +177,7 @@
                     </ul>
                     <ul class="nav nav-sidebar collapse sidebar-menu sub" id="content">
                         <li>
-                            <a href="" ng-click='toCase()'><i class="fa fa-tasks"></i>用例模版</a>
+                            <a href="" ng-click='toCase()'><i class="fa fa-tasks"></i>用例模板</a>
                         </li>
                         <li ng-repeat='module in modules'>
                             <a href="" ng-click='toModules(module.name)'><i class="fa fa-tasks"></i>{{module.name}}</a>

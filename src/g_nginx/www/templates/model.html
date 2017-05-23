@@ -1,4 +1,4 @@
-<div ng-controller="loginModelCtrl">
+<div ng-controller="modelCtrl">
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12 col-sm-offset-3 col-md-10 col-md-offset-2 main">
@@ -145,8 +145,8 @@
                     <div class="modal fade" id="modelTips" tabindex="-1" role="dialog" aria-labelledby="modelTipsLabel">
                         <div class="modal-dialog modal-sm" role="document">
                             <div class="modal-content">
-                                <div class="alert alert-success col-sm-10 icon-space fade in">
-                                    <strong><i class="icon glyphicon glyphicon-ok-circle"></i>{{msg}}</strong>
+                                <div class="alert alert-success col-sm-8 icon-space fade in" id="modelAlert">
+                                    <strong><i class="icon glyphicon glyphicon-ok-circle" id="modelIcon"></i>{{msg}}</strong>
                                 </div>
                             </div>
                         </div>
@@ -275,8 +275,8 @@
                                 </h5>
                             </div>
                             <div class="panel-body">
-                                <form class="form-horizontal showcase-form" name="loginModelForm" novalidate
-                                      ng-submit="addTemplate(operation)" id='loginModelForm'>
+                                <form class="form-horizontal showcase-form" name="modelForm" novalidate
+                                      ng-submit="addTemplate(operation)" id='modelForm'>
                                     <div class="form-group">
                                         <label for="inputModelName" class="col-sm-5 control-label"><span
                                                 class="tips">*</span>用例名称</label>
@@ -284,9 +284,9 @@
                                             <input type="text" class="form-control" id="inputModelName" name="name"
                                                    placeholder="输入用例名称" ng-model="module.name" value="{{module.name}}"
                                                    ng-maxlength="10" required>
-                                            <span class="tips" ng-show="loginModelForm.name.$dirty && loginModelForm.name.$invalid">
-                                                <span ng-show="loginModelForm.name.$error.required">用例名称不能为空!</span>
-                                                <span ng-show="loginModelForm.name.$error.maxlength">用例名称不能大于10个字符!</span>
+                                            <span class="tips" ng-show="modelForm.name.$dirty && modelForm.name.$invalid">
+                                                <span ng-show="modelForm.name.$error.required">用例名称不能为空!</span>
+                                                <span ng-show="modelForm.name.$error.maxlength">用例名称不能大于10个字符!</span>
                                             </span>
                                         </div>
                                     </div>
@@ -332,8 +332,8 @@
                                             <input type="text" class="form-control" id="inputAPIHost" name="ip"
                                                    placeholder="127.0.0.1" ng-model="module.ip" value="{{module.ip}}"
                                                    required>
-                                            <span class="tips" ng-show="loginModelForm.ip.$dirty && loginModelForm.ip.$invalid">
-                                                <span ng-show="loginModelForm.ip.$error.required">主机IP不能为空!</span>
+                                            <span class="tips" ng-show="modelForm.ip.$dirty && modelForm.ip.$invalid">
+                                                <span ng-show="modelForm.ip.$error.required">主机IP不能为空!</span>
                                             </span>
                                         </div>
                                     </div>
@@ -345,8 +345,8 @@
                                             <input type="text" class="form-control" id="inputRequestURL" name="url"
                                                    placeholder="login" ng-model="module.url" value="{{module.url}}"
                                                    required>
-                                            <span class="tips" ng-show="loginModelForm.url.$dirty && loginModelForm.url.$invalid">
-                                                <span ng-show="loginModelForm.url.$error.required">请求URL不能为空!</span>
+                                            <span class="tips" ng-show="modelForm.url.$dirty && modelForm.url.$invalid">
+                                                <span ng-show="modelForm.url.$error.required">请求URL不能为空!</span>
                                             </span>
                                         </div>
                                     </div>
@@ -369,8 +369,8 @@
                                             <input type="text" class="form-control" id="inputRequestType" name="type"
                                                    placeholder="application/json" ng-model="module.type"
                                                    value="{{module.type}}" required>
-                                            <span class="tips" ng-show="loginModelForm.type.$dirty && loginModelForm.type.$invalid">
-                                                <span ng-show="loginModelForm.type.$error.required">请求类型不能为空!</span>
+                                            <span class="tips" ng-show="modelForm.type.$dirty && modelForm.type.$invalid">
+                                                <span ng-show="modelForm.type.$error.required">请求类型不能为空!</span>
                                             </span>
                                         </div>
                                     </div>
@@ -404,8 +404,8 @@
                                                       ng-model='module.data'
                                                       placeholder="请输入json格式形如:{'name':'liSi', 'password':'321'}"
                                                       required is-json>{{module.data}}</textarea>
-                                            <span class="tips" ng-show="loginModelForm.data.$dirty && loginModelForm.data.$invalid">
-                                                <span ng-show='loginModelForm.data.$error.isJson'>请求数据格式不正确!</span>
+                                            <span class="tips" ng-show="modelForm.data.$dirty && modelForm.data.$invalid">
+                                                <span ng-show='modelForm.data.$error.isJson'>请求数据格式不正确!</span>
                                             </span>
                                         </div>
                                     </div>
@@ -415,8 +415,8 @@
                                         <div class="col-sm-2">
                                             <textarea class="form-control" id="inputCheckPoint" rows="3" name="check"
                                                       placeholder="请输入检查点" ng-model="module.check" required>{{module.check}}</textarea>
-                                            <span class="tips" ng-show="loginModelForm.check.$dirty && loginModelForm.check.$invalid">
-                                                <span ng-show="loginModelForm.check.$error.required">检查点不能为空!</span>
+                                            <span class="tips" ng-show="modelForm.check.$dirty && modelForm.check.$invalid">
+                                                <span ng-show="modelForm.check.$error.required">检查点不能为空!</span>
                                             </span>
                                         </div>
                                     </div>
@@ -426,18 +426,18 @@
                                         <div class="col-sm-2">
                                             <textarea class="form-control" id="inputRemark" rows="3" name="desc"
                                                       placeholder="请描述用例功能" ng-model="module.desc" required>{{module.desc}}</textarea>
-                                            <span class="tips" ng-show="loginModelForm.desc.$dirty && loginModelForm.desc.$invalid">
-                                                <span ng-show="loginModelForm.desc.$error.required">用例说明不能为空!</span>
+                                            <span class="tips" ng-show="modelForm.desc.$dirty && modelForm.desc.$invalid">
+                                                <span ng-show="modelForm.desc.$error.required">用例说明不能为空!</span>
                                             </span>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="text-center icon-space">
                                             <button type="submit" class="btn btn-theme"
-                                                    ng-disabled="loginModelForm.$invalid"><i
-                                                    class="glyphicon glyphicon-floppy-disk" aria-hidden="true" data-toggle="modal" data-target="#modelTips"></i>保存
+                                                    ng-disabled="modelForm.$invalid" data-toggle="modal" data-target="#modelTips"><i
+                                                    class="glyphicon glyphicon-floppy-disk" aria-hidden="true" ></i>保存
                                             </button>
-                                            <!--<input type="submit" value="保存" class="btn btn-theme" ng-disabled="loginModelForm.$invalid" />-->
+                                            <!--<input type="submit" value="保存" class="btn btn-theme" ng-disabled="modelForm.$invalid" />-->
                                         </div>
                                     </div>
                                 </form>

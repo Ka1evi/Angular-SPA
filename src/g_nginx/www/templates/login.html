@@ -2,8 +2,8 @@
     <div class="container">
 
         <!--alert-info -->
-        <div class="alert alert-success pull-right col-sm-2 icon-space fade in" ng-show="alertInfo">
-            <strong><i class="icon glyphicon glyphicon-ok-circle"></i>{{msg}}</strong>
+        <div class="alert alert-success pull-right col-sm-2 icon-space fade in" id="loginAlert" ng-show="alertInfo">
+            <strong><i class="icon glyphicon glyphicon-ok-circle" id="loginIcon"></i>{{msg}}</strong>
         </div>
 
         <form class="form-login">
@@ -99,8 +99,8 @@
                                 <label class="control-label"><span class="tips">*</span>密码</label>
                                 <div>
                                     <input type="password" name="password1" placeholder="6-20个字符"
-                                           id='registerPwd1' class="form-control placeholder-no-fix"
-                                           ng-model='firstInput' ng-minlength="6" ng-maxlength="20" required>
+                                           id='registerPwd' class="form-control placeholder-no-fix"
+                                           ng-model='password1' ng-minlength="6" ng-maxlength="20" required>
                                     <span class="tips"
                                           ng-show="register.password1.$dirty && register.password1.$invalid">
                                         <span ng-show="register.password1.$error.required">密码不能为空!</span>
@@ -113,13 +113,13 @@
                                 <label class="control-label"><span class="tips">*</span>确认密码</label>
                                 <div>
                                     <input type="password" name="password2" placeholder="请再次输入密码"
-                                           id="registerPwd2" class="form-control placeholder-no-fix"
+                                           class="form-control placeholder-no-fix"
                                            ng-disabled="register.password1.$invalid"
-                                           ng-model='secondInput' required>
+                                           ng-model='password2' required>
                                     <span class="tips"
                                           ng-show="register.password2.$dirty && register.password2.$invalid">
                                         <span ng-show="register.password2.$error.required">请确认密码!</span>
-                                        <span ng-show="register.password2.$invalid = (firstInput != secondInput)">两次输入的密码不一致！</span>
+                                        <span ng-show="register.password2.$invalid = (password1 != password2)">两次输入的密码不一致！</span>
                                     </span>
                                 </div>
                             </div>
@@ -157,7 +157,7 @@
                         <div class="modal-footer">
                             <!--<button data-dismiss="modal" class="btn btn-default" type="button">取消</button>-->
                             <button type="submit" ng-disabled="register.user.$invalid || register.password1.$invalid || register.password2.$invalid || register.email.$invalid" data-dismiss="modal"
-                                    class="btn btn-theme btn-block" ng-click="toRegister()">注册
+                                    class="btn btn-theme btn-block" ng-click="toRegister()">注&nbsp&nbsp册
                             </button>
                         </div>
                     </form>
