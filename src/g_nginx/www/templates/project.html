@@ -12,7 +12,7 @@
                             </select>
                         </label>
                         <button type="button" class="btn btn-primary" ng-click="jump()">确认</button>
-                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteProject">
+                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteProject" ng-disabled="!vm.projectName.id">
                             删除项目
                         </button>
                     </div>
@@ -54,5 +54,4 @@
             </div>
         </div>
     </div>
-
 </div>

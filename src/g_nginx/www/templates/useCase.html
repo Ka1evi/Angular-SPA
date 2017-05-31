@@ -9,13 +9,16 @@
                             <div class="btn-group placeholder" role="group">
                                 <button type="button" class="btn btn-default" ng-click="clearData()">新增模板</button>
                                 <button type="button" class="btn btn-default" ng-click='delete()' data-toggle="modal"
-                                        data-target="#useCaseTips">删除模板</button>
+                                        data-target="#useCaseTips">删除模板
+                                </button>
                             </div>
                             <div class="pull-right icon-space">
                                 <button type="button" class="btn btn-theme" data-toggle="modal"
                                         data-target="#uploadModal"><i class="glyphicon glyphicon-cloud-upload"></i>导入
                                 </button>
-                                <button type="button" class="btn btn-theme" ng-click="download()"><i class="glyphicon glyphicon-cloud-download"></i>导出</button>
+                                <button type="button" class="btn btn-theme" ng-click="download()" data-toggle="modal"
+                                        data-target="#useCaseTips"><i class="glyphicon glyphicon-cloud-download"></i>导出
+                                </button>
                             </div>
                             <div class="col-sm-2 input-group">
                                 <label class="input-group-addon">搜索模板</label>
@@ -33,7 +36,8 @@
                                 <form enctype="multipart/form-data">
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal"
-                                                aria-label="Close" ng-click="closeUp()"><span aria-hidden="true">&times;</span>
+                                                aria-label="Close" ng-click="closeUp()"><span
+                                                aria-hidden="true">&times;</span>
                                         </button>
                                         <h4 class="modal-title" id="upLoad">导入文件</h4>
                                     </div>
@@ -56,11 +60,13 @@
                     </div>
 
                     <!-- alert-info Modal 提示信息-->
-                    <div class="modal fade" id="useCaseTips" tabindex="-1" role="dialog" aria-labelledby="useCaseTipsLabel">
+                    <div class="modal fade" id="useCaseTips" tabindex="-1" role="dialog"
+                         aria-labelledby="useCaseTipsLabel">
                         <div class="modal-dialog modal-sm" role="document">
                             <div class="modal-content">
                                 <div class="alert alert-success col-sm-8 icon-space fade in" id="useCaseAlert">
-                                    <strong><i class="icon glyphicon glyphicon-ok-circle" id="useCaseIcon"></i>{{msg}}</strong>
+                                    <strong><i class="icon glyphicon glyphicon-ok-circle"
+                                               id="useCaseIcon"></i>{{msg}}</strong>
                                 </div>
                             </div>
                         </div>
@@ -97,7 +103,8 @@
                                         <div class="icon-space">
                                             <a href="" title="编辑"><i class="glyphicon glyphicon-edit" aria-hidden="true"
                                                                      ng-click='editor(item.id)'></i></a>
-                                            <a href="" title="删除"><i class="glyphicon glyphicon-trash" aria-hidden="true"
+                                            <a href="" title="删除"><i class="glyphicon glyphicon-trash"
+                                                                     aria-hidden="true"
                                                                      ng-click='delete(item.id)'></i></a>
                                         </div>
                                     </td>
@@ -150,8 +157,10 @@
                                                 class="tips">*</span>模板名称</label>
                                         <div class="col-sm-2">
                                             <input type="text" class="form-control" name="name" placeholder="输入模板名称"
-                                                   ng-model="case.name" required value="{{case.name}}" ng-maxlength="10">
-                                            <span class="tips" ng-show="useCaseForm.name.$dirty && useCaseForm.name.$invalid">
+                                                   ng-model="case.name" required value="{{case.name}}"
+                                                   ng-maxlength="10">
+                                            <span class="tips"
+                                                  ng-show="useCaseForm.name.$dirty && useCaseForm.name.$invalid">
                                                 <span ng-show="useCaseForm.name.$error.required">模板名称不能为空!</span>
                                                 <span ng-show="useCaseForm.name.$error.maxlength">模板名称不能大于10个字符!</span>
                                             </span>
@@ -163,7 +172,8 @@
                                         <div class="col-sm-2">
                                             <input type="text" class="form-control" name="ip" placeholder="输入主机IP"
                                                    id='ip' ng-model="case.ip" required value="{{case.ip}}">
-                                            <span class="tips" ng-show="useCaseForm.ip.$dirty && useCaseForm.ip.$invalid">
+                                            <span class="tips"
+                                                  ng-show="useCaseForm.ip.$dirty && useCaseForm.ip.$invalid">
                                                 <span ng-show="useCaseForm.ip.$error.required">主机IP不能为空!</span>
                                             </span>
                                         </div>
@@ -174,7 +184,8 @@
                                         <div class="col-sm-2">
                                             <input type="text" class="form-control" name="url" placeholder="输入请求URL"
                                                    ng-model="case.url" required value="{{case.url}}">
-                                            <span class="tips" ng-show="useCaseForm.url.$dirty && useCaseForm.url.$invalid">
+                                            <span class="tips"
+                                                  ng-show="useCaseForm.url.$dirty && useCaseForm.url.$invalid">
                                                 <span ng-show="useCaseForm.url.$error.required">请求URL不能为空!</span>
                                             </span>
                                         </div>
@@ -195,7 +206,8 @@
                                         <div class="col-sm-2">
                                             <input type="text" class="form-control" name="type" placeholder="输入请求类型"
                                                    ng-model="case.type" value="{{case.type}}" required>
-                                            <span class="tips" ng-show="useCaseForm.type.$dirty && useCaseForm.type.$invalid">
+                                            <span class="tips"
+                                                  ng-show="useCaseForm.type.$dirty && useCaseForm.type.$invalid">
                                                 <span ng-show="useCaseForm.type.$error.required">请求类型不能为空!</span>
                                             </span>
                                         </div>

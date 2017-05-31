@@ -2,57 +2,57 @@
  * 创建一个服务用于存放用户选择的项目名和项目id,用户名,项目模块
  */
 
-angularApp.register.service("projectInfo",function(){
-    this.user={};  //用户名
-    this.project={};//项目名称
-    this.model={};  //选择的项目id
-    this.modules={};//项目下的模块;
-    this.allProject={};//当前用户下的所有项目
-    this.fromPage=null;//设置来的页面
-    
-    this.setProjectName=function(name){
-        this.project.name=name
+angularApp.register.service("projectInfo", function () {
+    var user = {};  //用户名
+    var project = {};//项目名称
+    var model = {};  //选择的项目id
+    var modules = {};//项目下的模块;
+    var allProject = {};//当前用户下的所有项目
+    var fromPage = null;//设置来的页面
+
+    this.setProjectName = function (name) {
+        project.name = name
     }
-    this.getProjectName=function(){
-        return this.project.name
+    this.getProjectName = function () {
+        return project.name
     }
-    
-    this.setModelId=function(modelName){
-    	this.model=modelName;
+
+    this.setModelId = function (id) {
+        model = id;
     }
-    this.getModelId=function(){
-    	return this.model
+    this.getModelId = function () {
+        return model
     }
-    
-    this.setUserName=function(name){
-    	this.user.name=name;
+
+    this.setUserName = function (name) {
+        user.name = name;
     }
-    
-    this.getUserName=function(){
-    	return this.user.name;
+
+    this.getUserName = function () {
+        return user.name;
     }
-    
-    this.setModules=function(modules){
-    	this.modules=modules;
+
+    this.setModules = function (allModule) {
+        modules = allModule;
     }
-    
-    this.getModels=function(){
-    	return this.modules;
+
+    this.getModels = function () {
+        return modules;
     }
-    
-    this.setAllProject=function(allProject){
-    	this.allProject=allProject;
+
+    this.setAllProject = function (projects) {
+        allProject = projects;
     }
-    
-    this.getAllProject=function(){
-    	return this.allProject;
+
+    this.getAllProject = function () {
+        return allProject;
     }
-    
-    this.setFromPage=function(name){
-        this.fromPage=name;
+
+    this.setFromPage = function (page) {
+        fromPage = page;
     }
-    this.getFromPage=function(){
-        return this.fromPage;
+    this.getFromPage = function () {
+        return fromPage;
     }
-    
+
 })

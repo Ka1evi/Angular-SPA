@@ -50,19 +50,9 @@ angularApp.register.controller('projectCtrl', ['$scope', '$http', 'projectInfo',
                     vm.projectInfo = allProject;
                     projectInfo.setAllProject(allProject);
                     $rootScope.$broadcast('updateCurrentName', {'itemName': vm.projectName.name});
-                    $scope.msg = "项目删除成功！";
-                    setStyle('itemAlert', 'itemIcon', true);
-                    $timeout(function () {
-                        $('#projectAlert').modal('hide');
-                    }, 1000);
+                    setStyle('itemAlert', 'itemIcon', '#projectAlert', true, $scope, "项目删除成功！");
                 } else {
-                    $scope.msg = "项目删除失败！";
-                    setStyle('itemAlert', 'itemIcon', false);
-                    //angular.element(".alert").addClass("alert-danger");
-                    //angular.element('.icon').addClass('glyphicon-ban-circle');
-                    $timeout(function () {
-                        $('#projectAlert').modal('hide');
-                    }, 1000);
+                    setStyle('itemAlert', 'itemIcon', '#projectAlert', false, $scope, "项目删除失败！");
                 }
             } else {
                 alert(result.info);
@@ -72,24 +62,7 @@ angularApp.register.controller('projectCtrl', ['$scope', '$http', 'projectInfo',
 
     //监听新增项目事件，更新下拉框
     $scope.$on('updateItem', function (e, data) {
-
         vm.projectInfo = data.detailData;
     })
 
 }]);
-
-/**
- * 切换提示样式
- * id_alert:弹框文字的id
- * id_icon:图标的id
- *
- */
-function setStyle(id_alert, id_icon, flag) {
-    if (flag) {
-        document.getElementById(id_alert).className = "alert alert-success col-sm-8 icon-space fade in";
-        document.getElementById(id_icon).className = "icon glyphicon glyphicon-ok-circle";
-    } else {
-        document.getElementById(id_alert).className = "alert alert-danger col-sm-8 icon-space fade in";
-        document.getElementById(id_icon).className = "icon glyphicon glyphicon-ban-circle";
-    }
-}

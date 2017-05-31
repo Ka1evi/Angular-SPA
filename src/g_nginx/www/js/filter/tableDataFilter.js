@@ -3,26 +3,25 @@
  * 
  */
 
+angularApp.register.filter("tableDataFilter", function () {
+    return function (input, arr) {
 
-angularApp.register.filter("tableDataFilter", function() {
-	return function(input, arr) {
-		
-		//console.log(input);
-		//console.log(arr)
-		
-		var filterArr = []; //过滤后的数组
-		var tempArr = {}; //临时存放满足过滤条件的数组元素
+        //console.log(input);
+        //console.log(arr)
 
-		angular.forEach(input, function(v, k) {
+        var filterArr = []; //过滤后的数组
+        var tempArr = {}; //临时存放满足过滤条件的数组元素
 
-			angular.forEach(arr, function(av, ak) {
-				console.log(v);
-				delete v[av];
-			})
+        angular.forEach(input, function (v, k) {
 
-			filterArr[filterArr.length] = v
-		})
-		console.log(filterArr);
-		return filterArr;
-	}
+            angular.forEach(arr, function (av, ak) {
+                //console.log(v);
+                delete v[av];
+            })
+
+            filterArr[filterArr.length] = v
+        })
+        //console.log(filterArr);
+        return filterArr;
+    }
 })

@@ -2,11 +2,11 @@
  * Created by root on 2017/4/12.
  */
 
-angularApp.register.controller('currentProjectCtrl', ['$scope','projectInfo','$stateParams',function ($scope,projectInfo,$stateParams) {
-    var currentName=projectInfo.getProjectName();
-    if(currentName !=null){
-        $scope.vm={
-            projectName:currentName
+angularApp.register.controller('currentProjectCtrl', ['$scope', 'projectInfo', '$stateParams', function ($scope, projectInfo, $stateParams) {
+    var currentName = projectInfo.getProjectName();
+    if (currentName != null) {
+        $scope.vm = {
+            projectName: currentName
         }
     }
 
@@ -22,22 +22,21 @@ angularApp.register.controller('currentProjectCtrl', ['$scope','projectInfo','$s
     ]
 
     $scope.labels = ["测试成功次数", "测试失败次数"];
-    
-    var projectDetail=$stateParams.projectDetail;
-    if(projectDetail){
-        var desc=projectDetail.desc;
-        var success=projectDetail.suc_num;
-        var fail=projectDetail.fail_num;
 
+    var projectDetail = $stateParams.projectDetail;
+    if (projectDetail) {
+        var desc = projectDetail.desc;
+        var success = projectDetail.suc_num;
+        var fail = projectDetail.fail_num;
 
-        $scope.data = [success,fail];
+        $scope.data = [success, fail];
         $scope.options = {
-            legend : {
-                display : true,
-                position : "right"
+            legend: {
+                display: true,
+                position: "right"
             }
         }
-        $scope.desc=desc;
+        $scope.desc = desc;
     }
 
 }]);

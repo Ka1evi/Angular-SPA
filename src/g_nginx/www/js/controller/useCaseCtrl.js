@@ -2,7 +2,7 @@
  * Created by root on 2017/4/12.
  */
 
-angularApp.register.controller('useCaseCtrl', ['$scope', '$http', 'projectInfo', '$stateParams', 'paging', 'promise', 'formSerialization', 'upload','$timeout', function ($scope, $http, projectInfo, $stateParams, paging, promise, formSerialization, upload,$timeout) {
+angularApp.register.controller('useCaseCtrl', ['$scope', '$http', 'projectInfo', '$stateParams', 'paging', 'promise', 'formSerialization', 'upload', '$timeout', 'download', function ($scope, $http, projectInfo, $stateParams, paging, promise, formSerialization, upload, $timeout, download) {
 
     var currentName = projectInfo.getProjectName();
     if (currentName != null) {
@@ -38,7 +38,7 @@ angularApp.register.controller('useCaseCtrl', ['$scope', '$http', 'projectInfo',
     var up_url = path['upload'];
     //文件导出路径
     var down_url = path['download'];
-    var down_address = 'C:/downCase/';//导出路径
+    var down_address = 'C:/downCase/case/';//导出路径
 
     $scope.hidden = false;
 
@@ -55,8 +55,6 @@ angularApp.register.controller('useCaseCtrl', ['$scope', '$http', 'projectInfo',
         console.log($scope.hidden)
         $scope.hidden = true;
         $scope.operation = '新增';//默认是新增模版
-        //清空表单数据
-        //angular.element('#useCaseForm').find('input').val('');
     }
 
 
@@ -89,20 +87,9 @@ angularApp.register.controller('useCaseCtrl', ['$scope', '$http', 'projectInfo',
                     $scope.total = result.data.total;
                     total = $scope.total;
                     paging(infoPart, 8, $scope, total, idTemp, url, paramsPaging);
-                    $scope.msg = "新增成功！";
-                    setStyle('useCaseAlert','useCaseIcon',true);
-                    $timeout(function () {
-                        $('#useCaseTips').modal('hide');
-                    }, 1000);
+                    setStyle('useCaseAlert', 'useCaseIcon', '#useCaseTips', true, $scope, "操作成功！");
                 } else {
-                    $scope.msg = "新增失败！";
-                    //$scope.useCaseTips=true;
-                    setStyle('useCaseAlert','useCaseIcon',false);
-                    //angular.element('.alert').addClass('alert-danger');
-                    //angular.element('.icon').addClass('glyphicon-ban-circle');
-                    $timeout(function () {
-                        $('#useCaseTips').modal('hide');
-                    }, 1000);
+                    setStyle('useCaseAlert', 'useCaseIcon', '#useCaseTips', false, $scope, "操作失败！");
                 }
 
             } else {
@@ -147,12 +134,17 @@ angularApp.register.controller('useCaseCtrl', ['$scope', '$http', 'projectInfo',
         if (arguments.length == 1) {   //单个删除
             params = angular.extend({'opr': 'cmdelete'}, {'pid': projectId, 'id': id});
         } else if (arguments.length == 0) {  //批量删除
+            if (idTemp.length == 0) {
+                setStyle('useCaseAlert', 'useCaseIcon', '#useCaseTips', false, $scope, "请选择要删除的模板！");
+                return;
+            }
             params = angular.extend({'opr': 'cmdelete'}, {'pid': projectId, 'id': idTemp});
         }
         promise(params, url).then(function (result) {
 
             if (result.flag) {
                 if (0 == result.data.status) {
+                    setStyle('useCaseAlert', 'useCaseIcon', '#useCaseTips', true, $scope, "删除成功！");
                     infoPart = result.data.data; //重新获取的数据
                     total = result.data.total;
                     $scope.total = total;
@@ -163,13 +155,7 @@ angularApp.register.controller('useCaseCtrl', ['$scope', '$http', 'projectInfo',
                     }
                     paging(infoPart, 8, $scope, total, idTemp, url, paramsPaging);
                 } else {
-                    $scope.msg = "删除失败！";
-                    setStyle('useCaseAlert','useCaseIcon',false);
-                    //angular.element('.alert').addClass('alert-danger');
-                    //angular.element('.icon').addClass('glyphicon-ban-circle');
-                    $timeout(function () {
-                        $('#useCaseTips').modal('hide');
-                    }, 1000);
+                    setStyle('useCaseAlert', 'useCaseIcon', '#useCaseTips', false, $scope, "删除失败！");
                 }
 
             } else {
@@ -248,96 +234,6 @@ angularApp.register.controller('useCaseCtrl', ['$scope', '$http', 'projectInfo',
     upload(up_url, formData2, $scope, idTemp, paramsPaging, url);
     /*++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
-    //关闭上传
-    $scope.closeUp = function () {
-        var others = document.getElementById('count');
-        var canvas = document.querySelector('canvas');
-        var context = canvas.getContext('2d');
-        others.innerText = 0;
-        context.clearRect(0, 0, 500, 20);
-    }
-
-
-    //导入文件
-    /*
-     $scope.upload=function(){
-
-     var file=angular.element('#InputFile').get(0).files[0];
-
-     var formData=new FormData();
-
-     formData.append("pid",projectId);
-     formData.append("pmodel",modelName);
-     formData.append("user",username);
-     formData.append("opr",'upload');
-     formData.append("file",file);
-
-     $http({
-     url:up_url,
-     headers: {
-     'Content-Type': undefined
-     },
-     method:'post',
-     data:formData
-
-     }).then(function(res){
-
-     var respond=res.data;
-     if("success" == respond.msg){
-     var results=respond.data;
-     $scope.total=results.count;
-     total=results.count;
-     infoPart=results.list;
-     paging(infoPart,8,$scope,total,idTemp,url,paramsPaging);
-     }else{
-     alert("上传失败");
-     }
-
-     }).catch(function(e){
-
-     })
-
-     }
-     */
-
-    //导出到文件
-    $scope.download = function () {
-
-        if (0 == idTemp.length) {
-            return;
-        }
-
-        params = angular.extend({'opr': 'caseout'}, {'typ': 0, 'address': down_address, 'id': idTemp});
-
-        promise(params, down_url).then(function (result) {
-
-
-            if (result.flag) {
-                var downloadFile = result.data;
-                if (0 == downloadFile.status) {
-                    var file_address = downloadFile.address + downloadFile.filename;
-                    alert("文件导出成功,保存在:" + file_address);
-                }
-
-            } else {
-                alert(result.info);
-            }
-        })
-    }
+    //导出文件
+    download($scope, 'caseout', 0, down_address, idTemp, down_url, 'useCaseAlert', 'useCaseIcon', '#useCaseTips');
 }]);
-
-/**
- * 切换提示样式
- * id_alert:弹框文字的id
- * id_icon:图标的id
- *
- */
-function setStyle(id_alert,id_icon,flag) {
-    if(flag){
-        document.getElementById(id_alert).className = "alert alert-success col-sm-8 icon-space fade in";
-        document.getElementById(id_icon).className = "icon glyphicon glyphicon-ok-circle";
-    }else{
-        document.getElementById(id_alert).className = "alert alert-danger col-sm-8 icon-space fade in";
-        document.getElementById(id_icon).className = "icon glyphicon glyphicon-ban-circle";
-    }
-}

@@ -47,7 +47,7 @@ angularApp.config(['$stateProvider','$urlRouterProvider','$locationProvider',fun
             url:'/useCase',
             templateUrl: 'templates/useCase.html',
             resolve: {
-                load: angularApp.asyncjs(['js/controller/useCaseCtrl.js','js/service/projectInfo.js','js/service/promise.js','js/service/paging.js','js/service/formSerialization.js','js/service/upload.js'])
+                load: angularApp.asyncjs(['js/controller/useCaseCtrl.js','js/service/projectInfo.js','js/service/promise.js','js/service/paging.js','js/service/formSerialization.js','js/service/upload.js','js/service/download.js'])
             },
             params:{detailCase:null,modelName:null,pid:null}
         })
@@ -56,7 +56,7 @@ angularApp.config(['$stateProvider','$urlRouterProvider','$locationProvider',fun
             url:'/model',
             templateUrl: 'templates/model.html',
             resolve: {
-                load: angularApp.asyncjs(['js/controller/modelCtrl.js','js/service/projectInfo.js','js/service/promise.js','js/service/paging.js','js/service/formSerialization.js','js/directive/isJson.js','js/filter/headerFilter.js','js/filter/tableDataFilter.js'])
+                load: angularApp.asyncjs(['js/controller/modelCtrl.js','js/service/projectInfo.js','js/service/promise.js','js/service/paging.js','js/service/formSerialization.js','js/directive/isJson.js','js/filter/headerFilter.js','js/filter/tableDataFilter.js','js/service/upload.js','js/service/download.js'])
             },
             params:{detailCase:null,modelName:null,pid:null,caseInfo:null}
         })
