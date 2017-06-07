@@ -14,7 +14,7 @@ angularApp.register.controller('slidebarCtrl', ['$state', '$stateParams', '$scop
         path;   //对应模块的路径
     var nameArr = [];//要删除的模块名称，是数组
     var addressTemp = [];//存储邮箱地址的容器
-    var username = projectInfo.getUserName();
+    username = projectInfo.getUserName();
     allProject = projectInfo.getAllProject();
     if (username != null) {
         $scope.currentUser = username;

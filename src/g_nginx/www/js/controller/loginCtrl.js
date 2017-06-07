@@ -2,7 +2,7 @@
  * Created by root on 2017/4/18.
  */
 
-angularApp.register.controller('loginCtrl', ['$state', '$scope', '$http', 'promise', 'projectInfo', '$timeout', function ($state, $scope, $http, promise, projectInfo, $timeout) {
+angularApp.register.controller('loginCtrl', ['$state', '$scope', '$http', 'promise', 'projectInfo', function ($state, $scope, $http, promise, projectInfo) {
 
     var params;
     var path = env[env['get']]['login']; //获取登录模块的路径
@@ -11,8 +11,8 @@ angularApp.register.controller('loginCtrl', ['$state', '$scope', '$http', 'promi
 
     //登录
     $scope.loginKeyup = function (e) {
-        var keycode = window.event ? e.keyCode : e.which;//获取按键编码
-        if (keycode == 13) {
+        var keycode = window.event ? e.keyCode : e.which; //获取按键编码
+        if (keycode === 13) {
             $scope.toSlidebar();
         }
     }
@@ -37,10 +37,10 @@ angularApp.register.controller('loginCtrl', ['$state', '$scope', '$http', 'promi
                     projectInfo.setAllProject(allProject);
                     console.log(allProject)
                     $state.go('slidebar.project', {'detailData': allProject});
-                    angular.element('.modal-backdrop').remove();//移除模态框遮罩层
+                    angular.element('.modal-backdrop').remove(); //移除模态框遮罩层
                 } else {
                     setStyle('loginAlert', 'loginIcon', '#loginTips', false, $scope, "用户名或密码错误!");
-                }
+            }
             } else {
                 alert(result.info);
             }

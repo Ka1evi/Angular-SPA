@@ -4,24 +4,24 @@
 
 angularApp.register.service("projectInfo", function () {
     var user = {};  //用户名
-    var project = {};//项目名称
-    var model = {};  //选择的项目id
-    var modules = {};//项目下的模块;
+    var projectName = {};//项目名称
+    var projectId = {};  //选择的项目id
+    var model = {};//项目下的模块;
     var allProject = {};//当前用户下的所有项目
     var fromPage = null;//设置来的页面
 
     this.setProjectName = function (name) {
-        project.name = name
+        projectName.name = name
     }
     this.getProjectName = function () {
-        return project.name
+        return projectName.name
     }
 
     this.setModelId = function (id) {
-        model = id;
+        projectId = id;
     }
     this.getModelId = function () {
-        return model
+        return projectId
     }
 
     this.setUserName = function (name) {
@@ -33,11 +33,11 @@ angularApp.register.service("projectInfo", function () {
     }
 
     this.setModules = function (allModule) {
-        modules = allModule;
+        model = allModule;
     }
 
     this.getModels = function () {
-        return modules;
+        return model;
     }
 
     this.setAllProject = function (projects) {

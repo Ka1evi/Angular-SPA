@@ -15,22 +15,22 @@ angularApp.register.controller('projectCtrl', ['$scope', '$http', 'projectInfo',
 
         var projectId = angular.element('#projectId').text();  //获取项目的id
         console.log(vm.projectName.name)
-        projectInfo.setProjectName(vm.projectName.name);    //设置项目名
-        projectInfo.setModelId(projectId);                  //设置项目id
+                    projectInfo.setProjectName(vm.projectName.name);    //设置项目名
+                    projectInfo.setModelId(projectId);                  //设置项目id
 
-        if (projectId != null) {
-            params = angular.extend({'opr': 'proquery'}, {'id': projectId});
+                    if (projectId != null) {
+                        params = angular.extend({'opr': 'proquery'}, {'id': projectId});
 
-            promise(params, url).then(function (result) {
-                if (result.flag) {
-                    var projectDetail = result.data;
-                    var model = projectDetail.model;
-                    console.log(projectDetail);
-                    projectInfo.setModules(model);          //设置项目下的模块
-                    projectInfo.setFromPage('project');     //设置来的页面
-                    $state.go('slidebar.currentProject', {'projectDetail': projectDetail})
-                } else {
-                    alert(result.info);
+                        promise(params, url).then(function (result) {
+                            if (result.flag) {
+                                var projectDetail = result.data;
+                                var model = projectDetail.model;
+                                console.log(projectDetail);
+                                projectInfo.setModules(model);          //设置项目下的模块
+                                projectInfo.setFromPage('project');     //设置来的页面
+                                $state.go('slidebar.currentProject', {'projectDetail': projectDetail})
+                            } else {
+                                alert(result.info);
                 }
             })
         }
@@ -62,6 +62,7 @@ angularApp.register.controller('projectCtrl', ['$scope', '$http', 'projectInfo',
 
     //监听新增项目事件，更新下拉框
     $scope.$on('updateItem', function (e, data) {
+
         vm.projectInfo = data.detailData;
     })
 

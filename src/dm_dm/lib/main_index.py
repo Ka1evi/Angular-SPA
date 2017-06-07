@@ -7,11 +7,12 @@ import json
 import time
 import datetime
 from threading import Timer
-from bson.objectid import ObjectId
+# from bson.objectid import ObjectId
+from bson import ObjectId
 from pymongo import MongoClient
 import click
 import yaml
-from bson.objectid import ObjectId
+# from bson.objectid import ObjectId
 
 global alarm  # 设置定时闹钟
 alarm = 0
@@ -123,7 +124,7 @@ class Interface_Tasking():
             return response
 
         # 将请求类型放到头部
-        headers = {'Content-Type': request_params['c_type']}
+        headers = {'Content-Type': request_params['c_type'], 'Connection':'close'}
         if 'https://' in request_params['c_ip']:
             self.url = request_params['c_ip'] + request_params['c_url']
         else:

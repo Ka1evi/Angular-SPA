@@ -17,7 +17,7 @@
                                         data-target="#uploadModal"><i class="glyphicon glyphicon-cloud-upload"></i>导入
                                 </button>
                                 <button type="button" class="btn btn-theme" ng-click="download()" data-toggle="modal"
-                                        data-target="#useCaseTips"><i class="glyphicon glyphicon-cloud-download"></i>导出
+                                        data-target=""><i class="glyphicon glyphicon-cloud-download"></i>导出
                                 </button>
                             </div>
                             <div class="col-sm-2 input-group">
@@ -71,6 +71,9 @@
                             </div>
                         </div>
                     </div>
+
+                    <!--导出的链接，隐藏-->
+                    <a id='isDownload' href="#" class="hidden">下载</a>
 
                     <nav aria-label="Paging navigation">
                         <div class="table-responsive">
